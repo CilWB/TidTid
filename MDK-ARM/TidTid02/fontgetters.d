@@ -1,0 +1,11 @@
+tidtid02\fontgetters.o: ../touchgfx/generated/fonts/src/fontgetters.cpp
+tidtid02\fontgetters.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/InternalFlashFont.hpp
+tidtid02\fontgetters.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/ConstFont.hpp
+tidtid02\fontgetters.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Font.hpp
+tidtid02\fontgetters.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/TextProvider.hpp
+tidtid02\fontgetters.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+tidtid02\fontgetters.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Unicode.hpp
+tidtid02\fontgetters.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/Types.hpp
+tidtid02\fontgetters.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+tidtid02\fontgetters.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+tidtid02\fontgetters.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/Config.hpp

@@ -1,0 +1,9 @@
+tidtid02\bitmapdatabase.o: ../touchgfx/generated/images/src/bitmapdatabase.cpp
+tidtid02\bitmapdatabase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Bitmap.hpp
+tidtid02\bitmapdatabase.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
+tidtid02\bitmapdatabase.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+tidtid02\bitmapdatabase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/Types.hpp
+tidtid02\bitmapdatabase.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+tidtid02\bitmapdatabase.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+tidtid02\bitmapdatabase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/Config.hpp
+tidtid02\bitmapdatabase.o: ../TouchGFX/generated/images/include/BitmapDatabase.hpp
