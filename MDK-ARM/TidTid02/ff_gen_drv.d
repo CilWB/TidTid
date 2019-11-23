@@ -49,8 +49,6 @@ tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sai.h
 tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h
 tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h
 tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spdifrx.h
-tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h
-tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h
 tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h
 tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h
 tidtid02\ff_gen_drv.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h

@@ -53,6 +53,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
@@ -62,7 +63,9 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  gui/include/gui/screen2_screen/Screen2Presenter.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/Slider.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ gui/include/gui/main_screen/mainView.hpp \
+ generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp \
+ gui/include/gui/main_screen/mainPresenter.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp
 
 generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
@@ -173,6 +176,8 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
 
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp:
@@ -191,6 +196,10 @@ gui/include/gui/screen2_screen/Screen2Presenter.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+gui/include/gui/main_screen/mainView.hpp:
+
+generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp:
+
+gui/include/gui/main_screen/mainPresenter.hpp:
 
 generated/texts/include/texts/TextKeysAndLanguages.hpp:

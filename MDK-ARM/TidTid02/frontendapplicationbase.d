@@ -63,8 +63,16 @@ tidtid02\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/model/ModelListe
 tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Box.hpp
 tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Button.hpp
 tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
+tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
+tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
+tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/FontManager.hpp
+tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/TypedText.hpp
+tidtid02\frontendapplicationbase.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
+tidtid02\frontendapplicationbase.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
+tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Texts.hpp
 tidtid02\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp
 tidtid02\frontendapplicationbase.o: ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp
 tidtid02\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp
+tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/Slider.hpp
+tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 tidtid02\frontendapplicationbase.o: ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
-tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Texts.hpp

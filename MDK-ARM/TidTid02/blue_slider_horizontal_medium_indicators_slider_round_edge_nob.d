@@ -1,0 +1,2 @@
+tidtid02\blue_slider_horizontal_medium_indicators_slider_round_edge_nob.o: ../touchgfx/generated/images/src/__designer/blue_slider_horizontal_medium_indicators_slider_round_edge_nob.cpp
+tidtid02\blue_slider_horizontal_medium_indicators_slider_round_edge_nob.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/Config.hpp

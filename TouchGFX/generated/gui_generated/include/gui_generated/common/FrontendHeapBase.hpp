@@ -18,6 +18,8 @@
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <gui/screen2_screen/Screen2View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
+#include <gui/main_screen/mainView.hpp>
+#include <gui/main_screen/mainPresenter.hpp>
 
 
 /**
@@ -42,7 +44,8 @@ public:
      */
     typedef meta::TypeList< Screen1View,
             meta::TypeList< Screen2View,
-            meta::Nil >
+            meta::TypeList< mainView,
+            meta::Nil > >
             > GeneratedViewTypes;
 
     /**
@@ -56,7 +59,8 @@ public:
      */
     typedef meta::TypeList< Screen1Presenter,
             meta::TypeList< Screen2Presenter,
-            meta::Nil >
+            meta::TypeList< mainPresenter,
+            meta::Nil > >
             > GeneratedPresenterTypes;
 
     /**

@@ -44,8 +44,6 @@ tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sai.h
 tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h
 tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h
 tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spdifrx.h
-tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h
-tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h
 tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h
 tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h
 tidtid02\main.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h
@@ -75,3 +73,5 @@ tidtid02\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 tidtid02\main.o: ../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h
 tidtid02\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 tidtid02\main.o: ../FATFS/Target/sd_diskio.h
+tidtid02\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+tidtid02\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

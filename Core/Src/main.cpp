@@ -25,7 +25,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,8 +64,6 @@ SD_HandleTypeDef hsd1;
 
 SPDIFRX_HandleTypeDef hspdif;
 
-SPI_HandleTypeDef hspi2;
-
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim5;
 TIM_HandleTypeDef htim8;
@@ -74,6 +73,8 @@ UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart6;
 
 osThreadId defaultTaskHandle;
+osThreadId blink01Handle;
+osThreadId blink02Handle;
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -90,7 +91,6 @@ static void MX_RTC_Init(void);
 static void MX_SAI2_Init(void);
 static void MX_SDMMC1_SD_Init(void);
 static void MX_SPDIFRX_Init(void);
-static void MX_SPI2_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM5_Init(void);
 static void MX_TIM8_Init(void);
@@ -101,6 +101,8 @@ extern void GRAPHICS_HW_Init(void);
 extern void GRAPHICS_Init(void);
 extern void GRAPHICS_MainTask(void);
 void StartDefaultTask(void const * argument);
+void StartBlink01(void const * argument);
+void StartBlink02(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -108,7 +110,11 @@ void StartDefaultTask(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+uint8_t cmdBuffer[8];
+uint8_t databuff[8];
+uint16_t CRC16_2(uint8_t*,uint8_t);
+char str[100];
+void temp();
 /* USER CODE END 0 */
 
 /**
@@ -149,7 +155,6 @@ int main(void)
   MX_SAI2_Init();
   MX_SDMMC1_SD_Init();
   MX_SPDIFRX_Init();
-  MX_SPI2_Init();
   MX_TIM3_Init();
   MX_TIM5_Init();
   MX_TIM8_Init();
@@ -189,6 +194,14 @@ int main(void)
   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 4096);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
+  /* definition and creation of blink01 */
+  osThreadDef(blink01, StartBlink01, osPriorityNormal, 0, 128);
+  blink01Handle = osThreadCreate(osThread(blink01), NULL);
+
+  /* definition and creation of blink02 */
+  osThreadDef(blink02, StartBlink02, osPriorityBelowNormal, 0, 128);
+  blink02Handle = osThreadCreate(osThread(blink02), NULL);
+
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
@@ -200,7 +213,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
+  while(1)
   {
     /* USER CODE END WHILE */
 
@@ -634,7 +647,7 @@ static void MX_SAI2_Init(void)
   hsai_BlockB2.Init.MonoStereoMode = SAI_STEREOMODE;
   hsai_BlockB2.Init.CompandingMode = SAI_NOCOMPANDING;
   hsai_BlockB2.Init.TriState = SAI_OUTPUT_NOTRELEASED;
-  hsai_BlockB2.FrameInit.FrameLength = 8;
+  hsai_BlockB2.FrameInit.FrameLength = 24;
   hsai_BlockB2.FrameInit.ActiveFrameLength = 1;
   hsai_BlockB2.FrameInit.FSDefinition = SAI_FS_STARTFRAME;
   hsai_BlockB2.FrameInit.FSPolarity = SAI_FS_ACTIVE_LOW;
@@ -714,46 +727,6 @@ static void MX_SPDIFRX_Init(void)
   /* USER CODE BEGIN SPDIFRX_Init 2 */
 
   /* USER CODE END SPDIFRX_Init 2 */
-
-}
-
-/**
-  * @brief SPI2 Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_SPI2_Init(void)
-{
-
-  /* USER CODE BEGIN SPI2_Init 0 */
-
-  /* USER CODE END SPI2_Init 0 */
-
-  /* USER CODE BEGIN SPI2_Init 1 */
-
-  /* USER CODE END SPI2_Init 1 */
-  /* SPI2 parameter configuration*/
-  hspi2.Instance = SPI2;
-  hspi2.Init.Mode = SPI_MODE_MASTER;
-  hspi2.Init.Direction = SPI_DIRECTION_2LINES;
-  hspi2.Init.DataSize = SPI_DATASIZE_4BIT;
-  hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
-  hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
-  hspi2.Init.NSS = SPI_NSS_SOFT;
-  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_2;
-  hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
-  hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
-  hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-  hspi2.Init.CRCPolynomial = 7;
-  hspi2.Init.CRCLength = SPI_CRC_LENGTH_DATASIZE;
-  hspi2.Init.NSSPMode = SPI_NSS_PULSE_ENABLE;
-  if (HAL_SPI_Init(&hspi2) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN SPI2_Init 2 */
-
-  /* USER CODE END SPI2_Init 2 */
 
 }
 
@@ -1066,13 +1039,16 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(LCD_BL_CTRL_GPIO_Port, LCD_BL_CTRL_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(LCD_DISP_GPIO_Port, LCD_DISP_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOI, LED_Pin|LCD_DISP_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(DCMI_PWR_EN_GPIO_Port, DCMI_PWR_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOG, D4_Pin|EXT_RST_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_8, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : OTG_HS_OverCurrent_Pin */
   GPIO_InitStruct.Pin = OTG_HS_OverCurrent_Pin;
@@ -1165,12 +1141,25 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOH, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : LED_Pin */
+  GPIO_InitStruct.Pin = LED_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
+  HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);
+
   /*Configure GPIO pin : DCMI_PWR_EN_Pin */
   GPIO_InitStruct.Pin = DCMI_PWR_EN_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(DCMI_PWR_EN_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : USERBUTTON_Pin */
+  GPIO_InitStruct.Pin = USERBUTTON_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(USERBUTTON_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LCD_INT_Pin */
   GPIO_InitStruct.Pin = LCD_INT_Pin;
@@ -1199,12 +1188,17 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOG, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : ARDUINO_A4_Pin ARDUINO_A5_Pin ARDUINO_A1_Pin ARDUINO_A2_Pin 
-                           ARDUINO_A3_Pin */
-  GPIO_InitStruct.Pin = ARDUINO_A4_Pin|ARDUINO_A5_Pin|ARDUINO_A1_Pin|ARDUINO_A2_Pin 
-                          |ARDUINO_A3_Pin;
+  /*Configure GPIO pins : ARDUINO_A4_Pin ARDUINO_A5_Pin ARDUINO_A1_Pin ARDUINO_A2_Pin */
+  GPIO_InitStruct.Pin = ARDUINO_A4_Pin|ARDUINO_A5_Pin|ARDUINO_A1_Pin|ARDUINO_A2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PF8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
   /*Configure GPIO pins : ULPI_STP_Pin ULPI_DIR_Pin */
@@ -1245,6 +1239,14 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Alternate = GPIO_AF10_OTG_HS;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /*Configure GPIO pins : ARDUINO_MISO_D12_Pin ARDUINO_MOSI_PWM_D11_Pin */
+  GPIO_InitStruct.Pin = ARDUINO_MISO_D12_Pin|ARDUINO_MOSI_PWM_D11_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  GPIO_InitStruct.Alternate = GPIO_AF5_SPI2;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
 }
 
 /* USER CODE BEGIN 4 */
@@ -1276,6 +1278,100 @@ void StartDefaultTask(void const * argument)
     osDelay(1);
   }
   /* USER CODE END 5 */ 
+}
+
+/* USER CODE BEGIN Header_StartBlink01 */
+/**
+* @brief Function implementing the blink01 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartBlink01 */
+void StartBlink01(void const * argument)
+{
+  /* USER CODE BEGIN StartBlink01 */
+  /* Infinite loop */
+  for(;;)
+  {
+		temp();
+    osDelay(1);
+  }
+  /* USER CODE END StartBlink01 */
+}
+
+float h=40.0,t=30.0;
+void temp(){
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_9,GPIO_PIN_SET);
+		cmdBuffer[0] = 0x03;
+		cmdBuffer[1] = 0x00;
+		cmdBuffer[2] = 0x04;
+			
+		osDelay(3000);
+	
+	for(int i=0; i<5; i++){
+//waleup sensor
+		HAL_I2C_Master_Transmit(&hi2c1,0x5c<<1,cmdBuffer,3,200);
+//send reading command
+		HAL_I2C_Master_Transmit(&hi2c1,0x5c<<1,cmdBuffer,3,200);
+		
+		HAL_Delay(1);
+//receive sentor data
+		HAL_I2C_Master_Receive(&hi2c1,0x5c<<1,databuff,8,200);
+			
+		uint16_t Rcrc = databuff[7]<<8;
+		Rcrc += databuff[6];
+		if (Rcrc == CRC16_2(databuff,6)){
+			
+			uint16_t temperature = ((databuff[4] &0x7f) << 8)+databuff[5];
+			t = temperature/10.0;
+			t = (((databuff[4] &0x80) >> 7 ) == 1) ? (t * (-1)) : t;
+			
+			uint16_t humidity = (databuff[2] << 8) + databuff[3];
+			h = humidity / 10.0;
+		}
+	}
+		sprintf(str,"xxtemperature = %4.1f \t humidity = %4.1f \n\n\r",t,h);
+		while(__HAL_UART_GET_FLAG(&huart6,UART_FLAG_TC)==RESET){}
+		HAL_UART_Transmit(&huart6, (uint8_t *) str, strlen(str), 200);
+		
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_9,GPIO_PIN_RESET);
+		
+}
+
+uint16_t CRC16_2(uint8_t *ptr,uint8_t length){
+		uint16_t crc = 0xffff;
+		uint16_t s = 0x00;
+		
+		while(length--){
+			crc ^= *ptr++;
+			for(s = 0; s <8; s++){
+				if((crc &0x01 ) != 0) {
+					crc >>= 1 ;
+					crc ^= 0xA001;
+				}
+				else crc >>=1;
+			}
+		}
+		return crc;
+}
+
+/* USER CODE BEGIN Header_StartBlink02 */
+/**
+* @brief Function implementing the blink02 thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_StartBlink02 */
+void StartBlink02(void const * argument)
+{
+  /* USER CODE BEGIN StartBlink02 */
+  /* Infinite loop */
+  for(;;)
+  {
+		HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
+    osDelay(500);
+  }
+  /* USER CODE END StartBlink02 */
 }
 
 /**

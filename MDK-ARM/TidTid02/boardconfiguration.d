@@ -71,9 +71,13 @@ tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/model/ModelListener.h
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Box.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Button.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
+tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp
+tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp
+tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/Slider.hpp
+tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/generated/images/include/BitmapDatabase.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/BoardConfiguration.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/GPIO.hpp
@@ -125,8 +129,6 @@ tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal
 tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_sd.h
 tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_ll_sdmmc.h
 tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spdifrx.h
-tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi.h
-tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_spi_ex.h
 tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim.h
 tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h
 tidtid02\boardconfiguration.o: ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal_uart.h

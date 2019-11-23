@@ -76,13 +76,16 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
  gui/include/gui/screen2_screen/Screen2View.hpp \
  generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
  gui/include/gui/screen2_screen/Screen2Presenter.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/Slider.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ gui/include/gui/main_screen/mainView.hpp \
+ generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp \
+ gui/include/gui/main_screen/mainPresenter.hpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/touch/SDL2TouchController.hpp \
@@ -243,6 +246,8 @@ gui/include/gui/model/ModelListener.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
 
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
 
 gui/include/gui/screen2_screen/Screen2View.hpp:
@@ -255,7 +260,11 @@ gui/include/gui/screen2_screen/Screen2Presenter.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Image.hpp:
 
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+gui/include/gui/main_screen/mainView.hpp:
+
+generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp:
+
+gui/include/gui/main_screen/mainPresenter.hpp:
 
 generated/images/include/BitmapDatabase.hpp:
 

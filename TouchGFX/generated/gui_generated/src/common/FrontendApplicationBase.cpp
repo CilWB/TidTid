@@ -11,6 +11,8 @@
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <gui/screen2_screen/Screen2View.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
+#include <gui/main_screen/mainView.hpp>
+#include <gui/main_screen/mainPresenter.hpp>
 
 using namespace touchgfx;
 

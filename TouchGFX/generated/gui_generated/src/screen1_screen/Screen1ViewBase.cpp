@@ -10,14 +10,14 @@ Screen1ViewBase::Screen1ViewBase() :
     buttonCallback(this, &Screen1ViewBase::buttonCallbackHandler)
 {
     box1.setPosition(0, 0, 480, 272);
-    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(3, 33, 166));
+    box1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
 
     button1.setXY(210, 106);
     button1.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID));
     button1.setAction(buttonCallback);
 
-    textArea1.setXY(194, 48);
-    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
+    textArea1.setXY(221, 190);
+    textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(TypedText(T_SINGLEUSEID2));
 
