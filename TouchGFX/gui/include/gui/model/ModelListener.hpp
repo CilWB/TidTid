@@ -27,6 +27,9 @@ public:
     {
         model = m;
     }
+		
+		virtual void checkClick(){}
+			
 protected:
     Model* model;
 };

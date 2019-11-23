@@ -156,7 +156,7 @@
             "Moveable": false
           },
           {
-            "TextId": "SingleUseId1",
+            "TextId": "SingleUseId4",
             "TextRotation": "0",
             "Color": {
               "Red": 0,
@@ -164,17 +164,18 @@
               "Blue": 0
             },
             "Alpha": 255,
-            "AutoSize": true,
+            "AutoSize": false,
             "LineSpacing": 0,
             "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
+              "TextId": "SingleUseId5",
+              "UseBuffer": true,
+              "BufferSize": 10
             },
             "Name": "textArea1",
-            "X": 194,
-            "Y": 54,
-            "Width": 45,
-            "Height": 25,
+            "X": 174,
+            "Y": 52,
+            "Width": 132,
+            "Height": 30,
             "Type": "TextArea",
             "Visible": true,
             "Draggable": false,
@@ -202,16 +203,74 @@
         "Name": "Screen2",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0
+      },
+      {
+        "Components": [
+          {
+            "Color": {
+              "Red": 29,
+              "Green": 29,
+              "Blue": 29
+            },
+            "Alpha": 255,
+            "Name": "box1",
+            "X": 0,
+            "Y": 0,
+            "Width": 480,
+            "Height": 272,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId3",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "mont_val",
+            "X": 82,
+            "Y": 58,
+            "Width": 65,
+            "Height": 48,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [],
+        "Name": "main",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
       }
     ],
     "CustomContainerDefinitions": [],
     "TextEntries": [
       {
-        "TextEntryId": "SingleUseId1",
+        "TextEntryId": "SingleUseId2",
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId2",
+        "TextEntryId": "SingleUseId3",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId4",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId5",
         "IsResource": false
       }
     ],

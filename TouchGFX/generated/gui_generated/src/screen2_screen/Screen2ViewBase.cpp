@@ -22,10 +22,12 @@ Screen2ViewBase::Screen2ViewBase() :
     slider1.setValueRange(0, 100);
     slider1.setValue(0);
 
-    textArea1.setXY(194, 54);
+    textArea1.setPosition(174, 52, 132, 30);
     textArea1.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     textArea1.setLinespacing(0);
-    textArea1.setTypedText(TypedText(T_SINGLEUSEID1));
+    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", TypedText(T_SINGLEUSEID5).getText());
+    textArea1.setWildcard(textArea1Buffer);
+    textArea1.setTypedText(TypedText(T_SINGLEUSEID4));
 
     add(box1);
     add(button1);

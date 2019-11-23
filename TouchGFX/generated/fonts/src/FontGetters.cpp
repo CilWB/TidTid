@@ -14,8 +14,32 @@ touchgfx::InternalFlashFont& getFont_ROGFonts_Regular_otf_40_4bpp();
 
 touchgfx::InternalFlashFont& getFont_ROGFonts_Regular_otf_40_4bpp()
 {
-    static touchgfx::InternalFlashFont ROGFonts_Regular_otf_40_4bpp(glyphs_ROGFonts_Regular_otf_40_4bpp, 2, 40, 0, 4, 0, 0, unicodes_ROGFonts_Regular_otf_40_4bpp, kerning_ROGFonts_Regular_otf_40_4bpp, 0, 0);
+    static touchgfx::InternalFlashFont ROGFonts_Regular_otf_40_4bpp(glyphs_ROGFonts_Regular_otf_40_4bpp, 3, 40, 0, 4, 0, 0, unicodes_ROGFonts_Regular_otf_40_4bpp, kerning_ROGFonts_Regular_otf_40_4bpp, 0, 0);
     return ROGFonts_Regular_otf_40_4bpp;
+}
+
+// ariblk_20_4bpp
+extern const touchgfx::GlyphNode glyphs_ariblk_20_4bpp[];
+extern const uint8_t unicodes_ariblk_20_4bpp[];
+extern const touchgfx::KerningNode kerning_ariblk_20_4bpp[];
+touchgfx::InternalFlashFont& getFont_ariblk_20_4bpp();
+
+touchgfx::InternalFlashFont& getFont_ariblk_20_4bpp()
+{
+    static touchgfx::InternalFlashFont ariblk_20_4bpp(glyphs_ariblk_20_4bpp, 16, 20, 0, 4, 0, 0, unicodes_ariblk_20_4bpp, kerning_ariblk_20_4bpp, 63, 0);
+    return ariblk_20_4bpp;
+}
+
+// upcdl_20_4bpp
+extern const touchgfx::GlyphNode glyphs_upcdl_20_4bpp[];
+extern const uint8_t unicodes_upcdl_20_4bpp[];
+extern const touchgfx::KerningNode kerning_upcdl_20_4bpp[];
+touchgfx::InternalFlashFont& getFont_upcdl_20_4bpp();
+
+touchgfx::InternalFlashFont& getFont_upcdl_20_4bpp()
+{
+    static touchgfx::InternalFlashFont upcdl_20_4bpp(glyphs_upcdl_20_4bpp, 0, 20, 0, 4, 0, 0, unicodes_upcdl_20_4bpp, kerning_upcdl_20_4bpp, 0, 0);
+    return upcdl_20_4bpp;
 }
 
 // verdana_10_4bpp
@@ -28,17 +52,5 @@ touchgfx::InternalFlashFont& getFont_verdana_10_4bpp()
 {
     static touchgfx::InternalFlashFont verdana_10_4bpp(glyphs_verdana_10_4bpp, 0, 10, 0, 4, 0, 0, unicodes_verdana_10_4bpp, kerning_verdana_10_4bpp, 0, 0);
     return verdana_10_4bpp;
-}
-
-// verdana_20_4bpp
-extern const touchgfx::GlyphNode glyphs_verdana_20_4bpp[];
-extern const uint8_t unicodes_verdana_20_4bpp[];
-extern const touchgfx::KerningNode kerning_verdana_20_4bpp[];
-touchgfx::InternalFlashFont& getFont_verdana_20_4bpp();
-
-touchgfx::InternalFlashFont& getFont_verdana_20_4bpp()
-{
-    static touchgfx::InternalFlashFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 5, 20, 0, 4, 0, 0, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 0, 0);
-    return verdana_20_4bpp;
 }
 

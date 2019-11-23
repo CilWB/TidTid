@@ -75,4 +75,7 @@ tidtid02\frontendapplicationbase.o: ../TouchGFX/generated/gui_generated/include/
 tidtid02\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp
 tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/Slider.hpp
 tidtid02\frontendapplicationbase.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+tidtid02\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/main_screen/mainView.hpp
+tidtid02\frontendapplicationbase.o: ../TouchGFX/generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp
+tidtid02\frontendapplicationbase.o: ../TouchGFX/gui/include/gui/main_screen/mainPresenter.hpp
 tidtid02\frontendapplicationbase.o: ../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp

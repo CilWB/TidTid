@@ -27,6 +27,8 @@ public:
 
     virtual ~Screen2Presenter() {};
 
+		virtual void checkClick();	
+			
 private:
     Screen2Presenter();
 

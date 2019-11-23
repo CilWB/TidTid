@@ -115,6 +115,7 @@ uint8_t databuff[8];
 uint16_t CRC16_2(uint8_t*,uint8_t);
 char str[100];
 void temp();
+int buttonCount=0;
 /* USER CODE END 0 */
 
 /**
@@ -647,7 +648,7 @@ static void MX_SAI2_Init(void)
   hsai_BlockB2.Init.MonoStereoMode = SAI_STEREOMODE;
   hsai_BlockB2.Init.CompandingMode = SAI_NOCOMPANDING;
   hsai_BlockB2.Init.TriState = SAI_OUTPUT_NOTRELEASED;
-  hsai_BlockB2.FrameInit.FrameLength = 24;
+  hsai_BlockB2.FrameInit.FrameLength = 8;
   hsai_BlockB2.FrameInit.ActiveFrameLength = 1;
   hsai_BlockB2.FrameInit.FSDefinition = SAI_FS_STARTFRAME;
   hsai_BlockB2.FrameInit.FSPolarity = SAI_FS_ACTIVE_LOW;
@@ -1293,66 +1294,14 @@ void StartBlink01(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		temp();
-    osDelay(1);
+		if(HAL_GPIO_ReadPin(GPIOI,GPIO_PIN_11)==GPIO_PIN_SET){
+			buttonCount++;
+			osDelay(200);
+		}
+		//temp();
+		osDelay(1);
   }
   /* USER CODE END StartBlink01 */
-}
-
-float h=40.0,t=30.0;
-void temp(){
-		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_9,GPIO_PIN_SET);
-		cmdBuffer[0] = 0x03;
-		cmdBuffer[1] = 0x00;
-		cmdBuffer[2] = 0x04;
-			
-		osDelay(3000);
-	
-	for(int i=0; i<5; i++){
-//waleup sensor
-		HAL_I2C_Master_Transmit(&hi2c1,0x5c<<1,cmdBuffer,3,200);
-//send reading command
-		HAL_I2C_Master_Transmit(&hi2c1,0x5c<<1,cmdBuffer,3,200);
-		
-		HAL_Delay(1);
-//receive sentor data
-		HAL_I2C_Master_Receive(&hi2c1,0x5c<<1,databuff,8,200);
-			
-		uint16_t Rcrc = databuff[7]<<8;
-		Rcrc += databuff[6];
-		if (Rcrc == CRC16_2(databuff,6)){
-			
-			uint16_t temperature = ((databuff[4] &0x7f) << 8)+databuff[5];
-			t = temperature/10.0;
-			t = (((databuff[4] &0x80) >> 7 ) == 1) ? (t * (-1)) : t;
-			
-			uint16_t humidity = (databuff[2] << 8) + databuff[3];
-			h = humidity / 10.0;
-		}
-	}
-		sprintf(str,"xxtemperature = %4.1f \t humidity = %4.1f \n\n\r",t,h);
-		while(__HAL_UART_GET_FLAG(&huart6,UART_FLAG_TC)==RESET){}
-		HAL_UART_Transmit(&huart6, (uint8_t *) str, strlen(str), 200);
-		
-		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_9,GPIO_PIN_RESET);
-		
-}
-
-uint16_t CRC16_2(uint8_t *ptr,uint8_t length){
-		uint16_t crc = 0xffff;
-		uint16_t s = 0x00;
-		
-		while(length--){
-			crc ^= *ptr++;
-			for(s = 0; s <8; s++){
-				if((crc &0x01 ) != 0) {
-					crc >>= 1 ;
-					crc ^= 0xA001;
-				}
-				else crc >>=1;
-			}
-		}
-		return crc;
 }
 
 /* USER CODE BEGIN Header_StartBlink02 */

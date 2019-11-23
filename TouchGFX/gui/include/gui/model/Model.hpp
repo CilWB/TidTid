@@ -35,11 +35,15 @@ public:
      * the ModelListener interface.
      */
     void tick();
+		int getC();
+		
 protected:
     /**
      * Pointer to the currently active presenter.
      */
     ModelListener* modelListener;
+		int c;
+
 };
 
 #endif /* MODEL_HPP */

@@ -11,7 +11,9 @@ public:
     virtual ~Screen2View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+		void setClick(int cc);
 protected:
+	
 };
 
 #endif // SCREEN2_VIEW_HPP

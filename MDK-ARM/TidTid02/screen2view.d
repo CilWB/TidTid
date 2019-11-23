@@ -65,3 +65,5 @@ tidtid02\screen2view.o: ../middlewares/st/touchgfx/touchgfx/framework/include/to
 tidtid02\screen2view.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
 tidtid02\screen2view.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 tidtid02\screen2view.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Texts.hpp
+tidtid02\screen2view.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+tidtid02\screen2view.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

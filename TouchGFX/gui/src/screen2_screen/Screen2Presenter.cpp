@@ -15,3 +15,8 @@ void Screen2Presenter::deactivate()
 {
 
 }
+
+void Screen2Presenter::checkClick()
+{
+	view.setClick(model->getC());
+}
