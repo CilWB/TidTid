@@ -25,8 +25,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
-#include <string.h>
+#include "stdio.h"
+#include "string.h"
+#include "pgmspace.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -110,13 +112,33 @@ void StartBlink02(void const * argument);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t cmdBuffer[8];
+void I2C_writebuff(I2C_HandleTypeDef hi,uint8_t DEV_ADDR,uint8_t sizebuff);
+void I2C_Readbuff(I2C_HandleTypeDef hi,uint8_t DEV_ADDR,uint8_t sizebuff);
+
+void rtc(void);
+void temp(void);
+
+
+uint8_t atxbuffx[8];
+uint8_t cmdBuffer[3];
 uint8_t databuff[8];
-uint16_t CRC16_2(uint8_t*,uint8_t);
+uint16_t sec,min,hour,day,date,month,year,year4;
 char str[100];
-void temp();
+uint8_t BCD2DEC(uint8_t data);
+uint8_t DEC2BCD(uint8_t data);
+float h=40.0,t=30.0;
+uint8_t step = 0; 
+HAL_StatusTypeDef status;
+uint16_t CRC16_2(uint8_t *,uint8_t );
+uint8_t ch[50];
+uint8_t dayOfWeek(int thn, int bln, int tgl);
+
 int buttonCount=0;
 /* USER CODE END 0 */
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+	HAL_UART_Receive_IT(&huart6, ch, 5);
+}	
 
 /**
   * @brief  The application entry point.
@@ -164,6 +186,7 @@ int main(void)
   MX_USART6_UART_Init();
   /* USER CODE BEGIN 2 */
 
+		//HAL_UART_Receive_IT(&huart6,ch,4);
   /* USER CODE END 2 */
 
 /* Initialise the graphical hardware */
@@ -172,8 +195,8 @@ int main(void)
   /* Initialise the graphical stack engine */
   GRAPHICS_Init();
       
-  
-
+	//HAL_UART_Receive_IT(&huart6, ch, 8);
+	
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
@@ -200,14 +223,14 @@ int main(void)
   blink01Handle = osThreadCreate(osThread(blink01), NULL);
 
   /* definition and creation of blink02 */
-  osThreadDef(blink02, StartBlink02, osPriorityBelowNormal, 0, 128);
+  osThreadDef(blink02, StartBlink02, osPriorityNormal, 0, 128);
   blink02Handle = osThreadCreate(osThread(blink02), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
-
-  /* Start scheduler */
+	
+	/* Start scheduler */
   osKernelStart();
   
   /* We should never get here as control is now taken by the scheduler */
@@ -1287,6 +1310,157 @@ void StartDefaultTask(void const * argument)
 * @param argument: Not used
 * @retval None
 */
+
+
+/*---------------------------------------------------------------------------------------------------*/
+
+
+void rtc(){
+		//HAL_GPIO_WritePin(GPIOC,GPIO_PIN_8,GPIO_PIN_RESET);
+		
+	//for(int i=0; i<3; i++){
+		atxbuffx[0] = 0;
+				
+		I2C_writebuff(hi2c1,0xD0,1);
+		
+		I2C_Readbuff(hi2c1,0xD0,7);
+		
+		sec 	= BCD2DEC(atxbuffx[0]);
+		min 	= BCD2DEC(atxbuffx[1]);
+		hour 	= BCD2DEC(atxbuffx[2]);
+		//day 	= BCD2DEC(atxbuffx[3]);
+		date 	= BCD2DEC(atxbuffx[4]);
+		month	= BCD2DEC(atxbuffx[5]);
+		year	= BCD2DEC(atxbuffx[6]);
+		
+		year4 = 2000+(year%100);
+		day = dayOfWeek(year,month,date);
+	//}
+		//sprintf(str,"\n\r%d : %d : %d \n\r %d / %d / %d ->day %d \n\r ",hour,min,sec,date,month,year4,day);
+		//while(__HAL_UART_GET_FLAG(&huart6,UART_FLAG_TC)==RESET){}
+		//HAL_UART_Transmit(&huart6, (uint8_t *) str, strlen(str), 1000);
+		//HAL_Delay(1000);
+		//HAL_GPIO_WritePin(GPIOC,GPIO_PIN_8,GPIO_PIN_SET);
+}
+
+const uint8_t daysInMonth [] PROGMEM = {31,28,31,30,31,30,31,31,30,31,30,31};
+static uint16_t date2days(uint16_t y, uint8_t m ,uint8_t d){
+	if (y>=2000)
+		y-=2000;
+	uint16_t days = d;
+	for(uint16_t i = 1; i< m; ++i)
+		days += pgm_read_byte(daysInMonth + i -1);
+	if(m>2 && y%4 == 0)
+		++days;
+	return days + 365*y + (y+3) /4 -1;
+}
+
+uint8_t dayOfWeek(int thn, int bln, int tgl){
+	uint8_t day = date2days(thn,bln,tgl);
+	return (day+6)%7;
+}
+
+void I2C_writebuff(I2C_HandleTypeDef hi,uint8_t DEV_ADDR,uint8_t sizebuff){
+	
+	while (HAL_I2C_Master_Transmit(&hi, (uint16_t) DEV_ADDR, (uint8_t *) &atxbuffx, (uint16_t) sizebuff, (uint32_t) 1000) != HAL_OK){
+	
+		//if(HAL_I2C_GetError(&hi) != HAL_I2C_ERROR_AF){
+		//	
+		//	sprintf(str,"ERROR");
+		//	while(__HAL_UART_GET_FLAG(&huart6,UART_FLAG_TC)==RESET){}
+		//	HAL_UART_Transmit(&huart6, (uint8_t *) str, strlen(str), 1000);
+		//}
+	}
+}
+
+void I2C_Readbuff(I2C_HandleTypeDef hi,uint8_t DEV_ADDR,uint8_t sizebuff){
+	
+	while (HAL_I2C_Master_Receive(&hi, (uint16_t) DEV_ADDR, (uint8_t*) &atxbuffx, (uint16_t) sizebuff, (uint32_t) 1000) != HAL_OK){
+	
+		//if(HAL_I2C_GetError(&hi) != HAL_I2C_ERROR_AF){
+		//	sprintf(str,"ERROR");
+		//	while(__HAL_UART_GET_FLAG(&huart3,UART_FLAG_TC)==RESET){}
+		//	HAL_UART_Transmit(&huart3, (uint8_t *) str, strlen(str), 1000);
+		//}
+	}
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+void temp(){
+		HAL_GPIO_WritePin(GPIOC,GPIO_PIN_9,GPIO_PIN_SET);
+		cmdBuffer[0] = 0x03;
+		cmdBuffer[1] = 0x00;
+		cmdBuffer[2] = 0x04;
+			
+		//osDelay(3000);
+	
+	for(int i=0; i<5; i++){
+//waleup sensor
+		HAL_I2C_Master_Transmit(&hi2c1,0x5c<<1,cmdBuffer,3,200);
+//send reading command
+		HAL_I2C_Master_Transmit(&hi2c1,0x5c<<1,cmdBuffer,3,200);
+		
+		osDelay(1);
+//receive sentor data
+		HAL_I2C_Master_Receive(&hi2c1,0x5c<<1,databuff,8,200);
+			
+		uint16_t Rcrc = databuff[7]<<8;
+		Rcrc += databuff[6];
+		if (Rcrc == CRC16_2(databuff,6)){
+			
+			uint16_t temperature = ((databuff[4] &0x7f) << 8)+databuff[5];
+			t = temperature/10.0;
+			t = (((databuff[4] &0x80) >> 7 ) == 1) ? (t * (-1)) : t;
+			
+			uint16_t humidity = (databuff[2] << 8) + databuff[3];
+			h = humidity / 10.0;
+		}
+	}
+		//sprintf(str,"xxtemperature = %4.1f \t humidity = %4.1f \n\n\r",t,h);
+		//while(__HAL_UART_GET_FLAG(&huart6,UART_FLAG_TC)==RESET){}
+		//HAL_UART_Transmit(&huart6, (uint8_t *) str, strlen(str), 200);
+		
+		//HAL_GPIO_WritePin(GPIOC,GPIO_PIN_9,GPIO_PIN_RESET);
+}
+
+uint16_t CRC16_2(uint8_t *ptr,uint8_t length){
+		uint16_t crc = 0xffff;
+		uint16_t s = 0x00;
+		
+		while(length--){
+			crc ^= *ptr++;
+			for(s = 0; s <8; s++){
+				if((crc &0x01 ) != 0) {
+					crc >>= 1 ;
+					crc ^= 0xA001;
+				}
+				else crc >>=1;
+			}
+		}
+		return crc;
+	
+	
+}
+/*-------------------------------------------------------------------------------*/
+
+uint8_t BCD2DEC(uint8_t data)
+{
+	return (data>>4)*10 + (data&0x0F);
+}
+
+uint8_t DEC2BCD(uint8_t data)
+{
+	return (data/10)<<4|(data%10);
+}
+
+
+/*-------------------------------------------------------------------------------*/
+
+
+
+
+
 /* USER CODE END Header_StartBlink01 */
 void StartBlink01(void const * argument)
 {
@@ -1294,12 +1468,15 @@ void StartBlink01(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		if(HAL_GPIO_ReadPin(GPIOI,GPIO_PIN_11)==GPIO_PIN_SET){
-			buttonCount++;
-			osDelay(200);
-		}
-		//temp();
-		osDelay(1);
+		//rtc();
+		//if(HAL_GPIO_ReadPin(GPIOI,GPIO_PIN_11)==GPIO_PIN_SET){
+		//	buttonCount++;
+		//	osDelay(200);
+		//}
+		//rtc();
+		
+		HAL_UART_Receive_IT(&huart6,ch,5);
+		osDelay(1000);
   }
   /* USER CODE END StartBlink01 */
 }
@@ -1317,8 +1494,9 @@ void StartBlink02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
-    osDelay(500);
+		//HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
+    rtc();
+		osDelay(500);
   }
   /* USER CODE END StartBlink02 */
 }

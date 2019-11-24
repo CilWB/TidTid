@@ -41,15 +41,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/main_screen/mainViewBase.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/mvp/MVPHeap.hpp \
  gui/include/gui/model/Model.hpp \
  gui/include/gui/main_screen/mainPresenter.hpp \
- gui/include/gui/model/ModelListener.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp \
- generated/texts/include/texts/TextKeysAndLanguages.hpp
+ gui/include/gui/model/ModelListener.hpp
 
 generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp:
 
@@ -134,19 +126,3 @@ gui/include/gui/model/Model.hpp:
 gui/include/gui/main_screen/mainPresenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp:
-
-generated/texts/include/texts/TextKeysAndLanguages.hpp:

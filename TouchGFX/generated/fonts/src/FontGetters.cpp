@@ -14,7 +14,7 @@ touchgfx::InternalFlashFont& getFont_ROGFonts_Regular_otf_40_4bpp();
 
 touchgfx::InternalFlashFont& getFont_ROGFonts_Regular_otf_40_4bpp()
 {
-    static touchgfx::InternalFlashFont ROGFonts_Regular_otf_40_4bpp(glyphs_ROGFonts_Regular_otf_40_4bpp, 3, 40, 0, 4, 0, 0, unicodes_ROGFonts_Regular_otf_40_4bpp, kerning_ROGFonts_Regular_otf_40_4bpp, 0, 0);
+    static touchgfx::InternalFlashFont ROGFonts_Regular_otf_40_4bpp(glyphs_ROGFonts_Regular_otf_40_4bpp, 2, 40, 0, 4, 0, 0, unicodes_ROGFonts_Regular_otf_40_4bpp, kerning_ROGFonts_Regular_otf_40_4bpp, 0, 0);
     return ROGFonts_Regular_otf_40_4bpp;
 }
 
@@ -26,7 +26,7 @@ touchgfx::InternalFlashFont& getFont_ariblk_20_4bpp();
 
 touchgfx::InternalFlashFont& getFont_ariblk_20_4bpp()
 {
-    static touchgfx::InternalFlashFont ariblk_20_4bpp(glyphs_ariblk_20_4bpp, 16, 20, 0, 4, 0, 0, unicodes_ariblk_20_4bpp, kerning_ariblk_20_4bpp, 63, 0);
+    static touchgfx::InternalFlashFont ariblk_20_4bpp(glyphs_ariblk_20_4bpp, 17, 20, 0, 4, 0, 0, unicodes_ariblk_20_4bpp, kerning_ariblk_20_4bpp, 63, 0);
     return ariblk_20_4bpp;
 }
 

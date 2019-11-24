@@ -20,6 +20,8 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <gui/main_screen/mainView.hpp>
 #include <gui/main_screen/mainPresenter.hpp>
+#include <gui/screen3_screen/Screen3View.hpp>
+#include <gui/screen3_screen/Screen3Presenter.hpp>
 
 
 /**
@@ -45,7 +47,8 @@ public:
     typedef meta::TypeList< Screen1View,
             meta::TypeList< Screen2View,
             meta::TypeList< mainView,
-            meta::Nil > >
+            meta::TypeList< Screen3View,
+            meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -60,7 +63,8 @@ public:
     typedef meta::TypeList< Screen1Presenter,
             meta::TypeList< Screen2Presenter,
             meta::TypeList< mainPresenter,
-            meta::Nil > >
+            meta::TypeList< Screen3Presenter,
+            meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**

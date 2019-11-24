@@ -5,10 +5,13 @@ build/MINGW32_NT-6.2/gui/src/main_screen/mainPresenter.o
 build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1Presenter.o
 build/MINGW32_NT-6.2/gui/src/screen1_screen/Screen1View.o
 build/MINGW32_NT-6.2/gui/src/model/Model.o
+build/MINGW32_NT-6.2/gui/src/screen3_screen/Screen3View.o
+build/MINGW32_NT-6.2/gui/src/screen3_screen/Screen3Presenter.o
 build/MINGW32_NT-6.2/gui/src/common/FrontendApplication.o
 build/MINGW32_NT-6.2/generated/gui_generated/src/screen2_screen/Screen2ViewBase.o
 build/MINGW32_NT-6.2/generated/gui_generated/src/main_screen/mainViewBase.o
 build/MINGW32_NT-6.2/generated/gui_generated/src/screen1_screen/Screen1ViewBase.o
+build/MINGW32_NT-6.2/generated/gui_generated/src/screen3_screen/Screen3ViewBase.o
 build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.o
 build/MINGW32_NT-6.2/generated/fonts/src/Kerning_verdana_10_4bpp.o
 build/MINGW32_NT-6.2/generated/fonts/src/Kerning_ROGFonts_Regular_otf_40_4bpp.o

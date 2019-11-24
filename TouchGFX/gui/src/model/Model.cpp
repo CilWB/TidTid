@@ -2,8 +2,8 @@
 #include <gui/model/ModelListener.hpp>
 
 extern int buttonCount;
-
-Model::Model() : modelListener(0),c(0)
+extern float t,h;
+Model::Model() : modelListener(0),c(0.0)
 {
 	
 }
@@ -15,6 +15,7 @@ void Model::tick()
 
 int Model::getC()
 {
-	c = buttonCount;
+	//c = buttonCount;
+	c = (int)t/1;
  	return c;
 }

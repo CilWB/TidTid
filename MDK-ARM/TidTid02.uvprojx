@@ -1,10 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_projx.xsd">
-
   <SchemaVersion>2.1</SchemaVersion>
-
   <Header>### uVision Project, (C) Keil Software</Header>
-
   <Targets>
     <Target>
       <TargetName>TidTid02</TargetName>
@@ -338,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F746xx,USE_HAL_DRIVER,STM32F746xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../FATFS/Target;        ../FATFS/App;        ../Core/Inc;        ../TouchGFX/target;        ../TouchGFX/generated/fonts/include;        ../TouchGFX/generated/texts/include;        ../TouchGFX/generated/images/include;        ../TouchGFX/generated/gui_generated/include;        ../TouchGFX/gui/include;../middlewares/st/touchgfx/touchgfx/framework/include;        ../Drivers/STM32F7xx_HAL_Driver/Inc;        ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy;        ../Middlewares/Third_Party/FatFs/src;        ../Middlewares/Third_Party/FreeRTOS/Source/include;        ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;        ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1;        ../Drivers/CMSIS/Device/ST/STM32F7xx/Include;        ../Drivers/CMSIS/Include;../middlewares/st/touchgfx/touchgfx/framework/include;        ..\Drivers\BSP;        ..\Drivers\BSP\STM32746G-Discovery;        ..\Drivers\BSP\Components\ft5336;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include</IncludePath>
+              <IncludePath>../FATFS/Target; ../FATFS/App; ../Core/Inc; ../TouchGFX/target; ../TouchGFX/generated/fonts/include; ../TouchGFX/generated/texts/include; ../TouchGFX/generated/images/include; ../TouchGFX/generated/gui_generated/include; ../TouchGFX/gui/include;../middlewares/st/touchgfx/touchgfx/framework/include; ../Drivers/STM32F7xx_HAL_Driver/Inc; ../Drivers/STM32F7xx_HAL_Driver/Inc/Legacy; ../Middlewares/Third_Party/FatFs/src; ../Middlewares/Third_Party/FreeRTOS/Source/include; ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS; ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM7/r0p1; ../Drivers/CMSIS/Device/ST/STM32F7xx/Include; ../Drivers/CMSIS/Include;../middlewares/st/touchgfx/touchgfx/framework/include; ..\Drivers\BSP; ..\Drivers\BSP\STM32746G-Discovery; ..\Drivers\BSP\Components\ft5336;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include;../middlewares/st/touchgfx/touchgfx/framework/include; ..\Drivers;../middlewares/st/touchgfx/touchgfx/framework/include</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -392,6 +389,11 @@
         <Group>
           <GroupName>Application/User/Core</GroupName>
           <Files>
+            <File>
+              <FileName>pgmspace.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Drivers\pgmspace.h</FilePath>
+            </File>
             <File>
               <FileName>main.cpp</FileName>
               <FileType>8</FileType>
@@ -822,6 +824,16 @@
               <FileType>8</FileType>
               <FilePath>../touchgfx/gui/src/screen2_screen/screen2view.cpp</FilePath>
             </File>
+            <File>
+              <FileName>Screen3Presenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screen3_screen/screen3presenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Screen3View.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/screen3_screen/screen3view.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -943,6 +955,11 @@
               <FilePath>../touchgfx/generated/gui_generated/src/screen2_screen/screen2viewbase.cpp</FilePath>
             </File>
             <File>
+              <FileName>Screen3ViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/screen3_screen/screen3viewbase.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Table_ariblk_20_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/table_ariblk_20_4bpp.cpp</FilePath>
@@ -1005,18 +1022,16 @@
       </Groups>
     </Target>
   </Targets>
-
   <RTE>
-    <apis/>
+    <apis></apis>
     <components>
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="4.3.0" condition="CMSIS Core">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.5.0"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.5.0"></package>
         <targetInfos>
-          <targetInfo name="TidTid02"/>
+          <targetInfo name="TidTid02"></targetInfo>
         </targetInfos>
       </component>
     </components>
-    <files/>
+    <files></files>
   </RTE>
-
 </Project>

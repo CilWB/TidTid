@@ -7,8 +7,6 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/main_screen/mainPresenter.hpp>
-#include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 
 class mainViewBase : public touchgfx::View<mainPresenter>
 {
@@ -22,12 +20,6 @@ protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
     }
-
-    /*
-     * Member Declarations
-     */
-    touchgfx::Box box1;
-    touchgfx::TextArea mont_val;
 
 private:
 

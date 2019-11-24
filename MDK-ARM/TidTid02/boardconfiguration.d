@@ -64,9 +64,9 @@ tidtid02\boardconfiguration.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\exception
 tidtid02\boardconfiguration.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\cassert
 tidtid02\boardconfiguration.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\assert.h
 tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/model/Model.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp
+tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/clock_screen/ClockView.hpp
+tidtid02\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/clock_screen/ClockViewBase.hpp
+tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/clock_screen/ClockPresenter.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/model/ModelListener.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Box.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Button.hpp
@@ -78,9 +78,6 @@ tidtid02\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_g
 tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/Slider.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/Image.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/main_screen/mainView.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/main_screen/mainPresenter.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/generated/images/include/BitmapDatabase.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/BoardConfiguration.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/hal/GPIO.hpp

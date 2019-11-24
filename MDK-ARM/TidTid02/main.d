@@ -75,3 +75,5 @@ tidtid02\main.o: ../Middlewares/Third_Party/FatFs/src/diskio.h
 tidtid02\main.o: ../FATFS/Target/sd_diskio.h
 tidtid02\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 tidtid02\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+tidtid02\main.o: ..\Drivers\pgmspace.h
+tidtid02\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\inttypes.h
