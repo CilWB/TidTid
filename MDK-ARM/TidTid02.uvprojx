@@ -785,6 +785,66 @@
           <GroupName>Application/User/TouchGFX/gui</GroupName>
           <Files>
             <File>
+              <FileName>alarmmmmmPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/alarmmmmm_screen/alarmmmmmpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>alarmmmmmView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/alarmmmmm_screen/alarmmmmmview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>alarmPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/alarm_screen/alarmpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>alarmView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/alarm_screen/alarmview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>calendarPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/calendar_screen/calendarpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>calendarView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/calendar_screen/calendarview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>count_downPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/count_down_screen/count_downpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>count_downView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/count_down_screen/count_downview.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>count_up2Presenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/count_up2_screen/count_up2presenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>count_up2View.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/count_up2_screen/count_up2view.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>count_upPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/count_up_screen/count_uppresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>count_upView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/gui/src/count_up_screen/count_upview.cpp</FilePath>
+            </File>
+            <File>
               <FileName>FrontendApplication.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/gui/src/common/frontendapplication.cpp</FilePath>
@@ -824,21 +884,21 @@
               <FileType>8</FileType>
               <FilePath>../touchgfx/gui/src/screen2_screen/screen2view.cpp</FilePath>
             </File>
-            <File>
-              <FileName>Screen3Presenter.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screen3_screen/screen3presenter.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Screen3View.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/screen3_screen/screen3view.cpp</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Application/User/TouchGFX/generated</GroupName>
           <Files>
+            <File>
+              <FileName>alarmmmmmViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/alarmmmmm_screen/alarmmmmmviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>alarmViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/alarm_screen/alarmviewbase.cpp</FilePath>
+            </File>
             <File>
               <FileName>ApplicationFontProvider.cpp</FileName>
               <FileType>8</FileType>
@@ -885,24 +945,104 @@
               <FilePath>../touchgfx/generated/images/src/__designer/blue_slider_horizontal_medium_slider_round_edge_fill.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_ariblk_20_4bpp.cpp</FileName>
+              <FileName>butdown.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_ariblk_20_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/butdown.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_ROGFonts_Regular_otf_40_4bpp.cpp</FileName>
+              <FileName>butup.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_rogfonts_regular_otf_40_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/butup.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_upcdl_20_4bpp.cpp</FileName>
+              <FileName>calendarViewBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_upcdl_20_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/gui_generated/src/calendar_screen/calendarviewbase.cpp</FilePath>
             </File>
             <File>
-              <FileName>Font_verdana_10_4bpp.cpp</FileName>
+              <FileName>count_downViewBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/font_verdana_10_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/gui_generated/src/count_down_screen/count_downviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>count_up2ViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/count_up2_screen/count_up2viewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>count_upViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/gui_generated/src/count_up_screen/count_upviewbase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>down.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/down.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>down1.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/down1.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>down2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/down2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>down_r.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/down_r.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>down_r2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/down_r2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Digitalt_19_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_digitalt_19_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Digitalt_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_digitalt_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Digitalt_29_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_digitalt_29_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Digitalt_30_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_digitalt_30_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_Digitalt_90_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_digitalt_90_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_impact_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_impact_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_OpenSans_Bold_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_opensans_bold_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_segoeuib_16_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_segoeuib_16_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font_segoeuib_18_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/font_segoeuib_18_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>FontGetters.cpp</FileName>
@@ -915,24 +1055,59 @@
               <FilePath>../touchgfx/generated/gui_generated/src/common/frontendapplicationbase.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_ariblk_20_4bpp.cpp</FileName>
+              <FileName>Group2823.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_ariblk_20_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/group2823.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_ROGFonts_Regular_otf_40_4bpp.cpp</FileName>
+              <FileName>Group2824.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_rogfonts_regular_otf_40_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/group2824.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_upcdl_20_4bpp.cpp</FileName>
+              <FileName>Kerning_Digitalt_19_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_upcdl_20_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_digitalt_19_4bpp.cpp</FilePath>
             </File>
             <File>
-              <FileName>Kerning_verdana_10_4bpp.cpp</FileName>
+              <FileName>Kerning_Digitalt_20_4bpp.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/kerning_verdana_10_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_digitalt_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_Digitalt_29_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_digitalt_29_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_Digitalt_30_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_digitalt_30_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_Digitalt_90_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_digitalt_90_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_impact_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_impact_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_OpenSans_Bold_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_opensans_bold_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_segoeuib_16_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_segoeuib_16_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Kerning_segoeuib_18_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/kerning_segoeuib_18_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>LanguageGb.cpp</FileName>
@@ -945,6 +1120,26 @@
               <FilePath>../touchgfx/generated/gui_generated/src/main_screen/mainviewbase.cpp</FilePath>
             </File>
             <File>
+              <FileName>reset.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/reset.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>reset1.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/reset1.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>save.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/save.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>save2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/save2.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Screen1ViewBase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/gui_generated/src/screen1_screen/screen1viewbase.cpp</FilePath>
@@ -955,29 +1150,79 @@
               <FilePath>../touchgfx/generated/gui_generated/src/screen2_screen/screen2viewbase.cpp</FilePath>
             </File>
             <File>
-              <FileName>Screen3ViewBase.cpp</FileName>
+              <FileName>snooze.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/screen3_screen/screen3viewbase.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/snooze.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_ariblk_20_4bpp.cpp</FileName>
+              <FileName>snooze2.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_ariblk_20_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/snooze2.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_ROGFonts_Regular_otf_40_4bpp.cpp</FileName>
+              <FileName>start.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_rogfonts_regular_otf_40_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/start.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_upcdl_20_4bpp.cpp</FileName>
+              <FileName>start1.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_upcdl_20_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/start1.cpp</FilePath>
             </File>
             <File>
-              <FileName>Table_verdana_10_4bpp.cpp</FileName>
+              <FileName>stop.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/fonts/src/table_verdana_10_4bpp.cpp</FilePath>
+              <FilePath>../touchgfx/generated/images/src/stop.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>stop1.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/stop1.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_Digitalt_19_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_digitalt_19_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_Digitalt_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_digitalt_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_Digitalt_29_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_digitalt_29_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_Digitalt_30_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_digitalt_30_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_Digitalt_90_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_digitalt_90_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_impact_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_impact_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_OpenSans_Bold_20_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_opensans_bold_20_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_segoeuib_16_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_segoeuib_16_4bpp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Table_segoeuib_18_4bpp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/fonts/src/table_segoeuib_18_4bpp.cpp</FilePath>
             </File>
             <File>
               <FileName>Texts.cpp</FileName>
@@ -988,6 +1233,31 @@
               <FileName>TypedTextDatabase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/texts/src/typedtextdatabase.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>up.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/up.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>up1.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/up1.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>up2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/up2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>up_r.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/up_r.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>up_r2.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/up_r2.cpp</FilePath>
             </File>
           </Files>
         </Group>

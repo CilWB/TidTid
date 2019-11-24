@@ -16,6 +16,6 @@ void Model::tick()
 int Model::getC()
 {
 	//c = buttonCount;
-	c = (int)t/1;
- 	return c;
+	//c = (int)t/1;
+ 	return 777;
 }

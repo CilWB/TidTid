@@ -1,6 +1,6 @@
-build/MINGW32_NT-6.2/generated/gui_generated/src/c_screen/CViewBase.o: \
- generated/gui_generated/src/c_screen/CViewBase.cpp \
- generated/gui_generated/include/gui_generated/c_screen/CViewBase.hpp \
+build/MINGW32_NT-6.2/generated/gui_generated/src/c_screen/cViewBase.o: \
+ generated/gui_generated/src/c_screen/cViewBase.cpp \
+ generated/gui_generated/include/gui_generated/c_screen/cViewBase.hpp \
  gui/include/gui/common/FrontendApplication.hpp \
  generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/mvp/MVPApplication.hpp \
@@ -39,22 +39,10 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/c_screen/CViewBase.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/JSMOCHelper.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/mvp/Presenter.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/mvp/MVPHeap.hpp \
- gui/include/gui/model/Model.hpp gui/include/gui/c_screen/CPresenter.hpp \
- gui/include/gui/model/ModelListener.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp \
- generated/images/include/BitmapDatabase.hpp \
- generated/texts/include/texts/TextKeysAndLanguages.hpp
+ gui/include/gui/model/Model.hpp gui/include/gui/c_screen/cPresenter.hpp \
+ gui/include/gui/model/ModelListener.hpp
 
-generated/gui_generated/include/gui_generated/c_screen/CViewBase.hpp:
+generated/gui_generated/include/gui_generated/c_screen/cViewBase.hpp:
 
 gui/include/gui/common/FrontendApplication.hpp:
 
@@ -134,30 +122,6 @@ generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp
 
 gui/include/gui/model/Model.hpp:
 
-gui/include/gui/c_screen/CPresenter.hpp:
+gui/include/gui/c_screen/cPresenter.hpp:
 
 gui/include/gui/model/ModelListener.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Box.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Widget.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/Button.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AbstractButton.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TextArea.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/FontManager.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/TypedText.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Texts.hpp:
-
-../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp:
-
-generated/images/include/BitmapDatabase.hpp:
-
-generated/texts/include/texts/TextKeysAndLanguages.hpp:

@@ -16,13 +16,35 @@ public:
     virtual ~FrontendApplicationBase() { }
 
     // Screen1
-    void gotoScreen1ScreenNoTransition();
-
     void gotoScreen1ScreenSlideTransitionEast();
 
 
     // Screen2
     void gotoScreen2ScreenCoverTransitionWest();
+
+
+    // main
+    void gotomainScreenNoTransition();
+
+
+    // calendar
+    void gotocalendarScreenNoTransition();
+
+
+    // count_up
+    void gotocount_upScreenNoTransition();
+
+
+    // count_up2
+    void gotocount_up2ScreenNoTransition();
+
+
+    // count_down
+    void gotocount_downScreenNoTransition();
+
+
+    // alarm
+    void gotoalarmScreenNoTransition();
 
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
@@ -30,13 +52,35 @@ protected:
     Model& model;
 
     // Screen1
-    void gotoScreen1ScreenNoTransitionImpl();
-
     void gotoScreen1ScreenSlideTransitionEastImpl();
 
 
     // Screen2
     void gotoScreen2ScreenCoverTransitionWestImpl();
+
+
+    // main
+    void gotomainScreenNoTransitionImpl();
+
+
+    // calendar
+    void gotocalendarScreenNoTransitionImpl();
+
+
+    // count_up
+    void gotocount_upScreenNoTransitionImpl();
+
+
+    // count_up2
+    void gotocount_up2ScreenNoTransitionImpl();
+
+
+    // count_down
+    void gotocount_downScreenNoTransitionImpl();
+
+
+    // alarm
+    void gotoalarmScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

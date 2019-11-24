@@ -6,13 +6,37 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID = 0; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID = 1; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID = 2; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID = 3; // Size: 60x60 pixels
-const uint16_t BITMAP_BLUE_SLIDER_HORIZONTAL_MEDIUM_INDICATORS_SLIDER_ROUND_EDGE_NOB_ID = 4; // Size: 48x48 pixels
-const uint16_t BITMAP_BLUE_SLIDER_HORIZONTAL_MEDIUM_SLIDER_ROUND_EDGE_BACK_ID = 5; // Size: 352x15 pixels
-const uint16_t BITMAP_BLUE_SLIDER_HORIZONTAL_MEDIUM_SLIDER_ROUND_EDGE_FILL_ID = 6; // Size: 352x15 pixels
+const uint16_t BITMAP_GROUP2823_ID = 0; // Size: 108x38 pixels
+const uint16_t BITMAP_GROUP2824_ID = 1; // Size: 108x38 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_ID = 2; // Size: 60x60 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_ROUND_ICON_BUTTON_PRESSED_ID = 3; // Size: 60x60 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_ID = 4; // Size: 60x60 pixels
+const uint16_t BITMAP_BLUE_BUTTONS_SQUARE_ICON_BUTTON_PRESSED_ID = 5; // Size: 60x60 pixels
+const uint16_t BITMAP_BLUE_SLIDER_HORIZONTAL_MEDIUM_INDICATORS_SLIDER_ROUND_EDGE_NOB_ID = 6; // Size: 48x48 pixels
+const uint16_t BITMAP_BLUE_SLIDER_HORIZONTAL_MEDIUM_SLIDER_ROUND_EDGE_BACK_ID = 7; // Size: 352x15 pixels
+const uint16_t BITMAP_BLUE_SLIDER_HORIZONTAL_MEDIUM_SLIDER_ROUND_EDGE_FILL_ID = 8; // Size: 352x15 pixels
+const uint16_t BITMAP_BUTDOWN_ID = 9; // Size: 108x38 pixels
+const uint16_t BITMAP_BUTUP_ID = 10; // Size: 108x38 pixels
+const uint16_t BITMAP_DOWN_ID = 11; // Size: 108x38 pixels
+const uint16_t BITMAP_DOWN1_ID = 12; // Size: 31x27 pixels
+const uint16_t BITMAP_DOWN2_ID = 13; // Size: 31x27 pixels
+const uint16_t BITMAP_DOWN_R_ID = 14; // Size: 27x31 pixels
+const uint16_t BITMAP_DOWN_R2_ID = 15; // Size: 27x31 pixels
+const uint16_t BITMAP_RESET_ID = 16; // Size: 108x38 pixels
+const uint16_t BITMAP_RESET1_ID = 17; // Size: 108x38 pixels
+const uint16_t BITMAP_SAVE_ID = 18; // Size: 38x108 pixels
+const uint16_t BITMAP_SAVE2_ID = 19; // Size: 38x108 pixels
+const uint16_t BITMAP_SNOOZE_ID = 20; // Size: 108x38 pixels
+const uint16_t BITMAP_SNOOZE2_ID = 21; // Size: 108x38 pixels
+const uint16_t BITMAP_START_ID = 22; // Size: 108x38 pixels
+const uint16_t BITMAP_START1_ID = 23; // Size: 108x38 pixels
+const uint16_t BITMAP_STOP_ID = 24; // Size: 108x38 pixels
+const uint16_t BITMAP_STOP1_ID = 25; // Size: 108x38 pixels
+const uint16_t BITMAP_UP_ID = 26; // Size: 108x38 pixels
+const uint16_t BITMAP_UP1_ID = 27; // Size: 31x27 pixels
+const uint16_t BITMAP_UP2_ID = 28; // Size: 31x27 pixels
+const uint16_t BITMAP_UP_R_ID = 29; // Size: 27x31 pixels
+const uint16_t BITMAP_UP_R2_ID = 30; // Size: 27x31 pixels
 
 namespace BitmapDatabase
 {

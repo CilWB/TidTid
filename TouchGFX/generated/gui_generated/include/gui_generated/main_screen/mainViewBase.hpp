@@ -7,6 +7,10 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/main_screen/mainPresenter.hpp>
+#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/containers/buttons/Buttons.hpp>
 
 class mainViewBase : public touchgfx::View<mainPresenter>
 {
@@ -21,7 +25,63 @@ protected:
         return *static_cast<FrontendApplication*>(Application::getInstance());
     }
 
+    /*
+     * Member Declarations
+     */
+    touchgfx::Box box1;
+    touchgfx::TextAreaWithOneWildcard mont_val;
+    touchgfx::TextAreaWithOneWildcard date_val;
+    touchgfx::TextAreaWithOneWildcard temp_val;
+    touchgfx::TextAreaWithOneWildcard year_val;
+    touchgfx::TextArea MONTH;
+    touchgfx::TextArea DATE;
+    touchgfx::TextArea TEMP;
+    touchgfx::TextAreaWithOneWildcard hour_val;
+    touchgfx::TextArea colon;
+    touchgfx::TextAreaWithOneWildcard minutes_val;
+    touchgfx::TextArea colon2;
+    touchgfx::TextAreaWithOneWildcard sec_val;
+    touchgfx::TextAreaWithOneWildcard SUN;
+    touchgfx::TextAreaWithOneWildcard MON;
+    touchgfx::TextAreaWithOneWildcard TUE;
+    touchgfx::TextAreaWithOneWildcard WED;
+    touchgfx::TextAreaWithOneWildcard THU;
+    touchgfx::TextAreaWithOneWildcard FRI;
+    touchgfx::TextAreaWithOneWildcard SAT;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_1;
+    touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_2;
+    touchgfx::TextArea celsius;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t MONT_VAL_SIZE = 2;
+    touchgfx::Unicode::UnicodeChar mont_valBuffer[MONT_VAL_SIZE];
+    static const uint16_t DATE_VAL_SIZE = 2;
+    touchgfx::Unicode::UnicodeChar date_valBuffer[DATE_VAL_SIZE];
+    static const uint16_t TEMP_VAL_SIZE = 2;
+    touchgfx::Unicode::UnicodeChar temp_valBuffer[TEMP_VAL_SIZE];
+    static const uint16_t YEAR_VAL_SIZE = 5;
+    touchgfx::Unicode::UnicodeChar year_valBuffer[YEAR_VAL_SIZE];
+    static const uint16_t HOUR_VAL_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar hour_valBuffer[HOUR_VAL_SIZE];
+    static const uint16_t MINUTES_VAL_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar minutes_valBuffer[MINUTES_VAL_SIZE];
+    static const uint16_t SEC_VAL_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar sec_valBuffer[SEC_VAL_SIZE];
+
 private:
+
+    /*
+     * Callback Handler Declarations
+     */
+    void flexButtonCallbackHandler(const touchgfx::AbstractButtonContainer& src);
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<mainViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
 
 };
 

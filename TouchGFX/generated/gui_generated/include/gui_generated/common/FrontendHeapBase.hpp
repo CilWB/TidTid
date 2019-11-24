@@ -11,6 +11,27 @@
 #include <touchgfx/transitions/CoverTransition.hpp>
 #include <touchgfx/transitions/SlideTransition.hpp>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
@@ -20,8 +41,18 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <gui/main_screen/mainView.hpp>
 #include <gui/main_screen/mainPresenter.hpp>
-#include <gui/screen3_screen/Screen3View.hpp>
-#include <gui/screen3_screen/Screen3Presenter.hpp>
+#include <gui/calendar_screen/calendarView.hpp>
+#include <gui/calendar_screen/calendarPresenter.hpp>
+#include <gui/count_up_screen/count_upView.hpp>
+#include <gui/count_up_screen/count_upPresenter.hpp>
+#include <gui/count_up2_screen/count_up2View.hpp>
+#include <gui/count_up2_screen/count_up2Presenter.hpp>
+#include <gui/count_down_screen/count_downView.hpp>
+#include <gui/count_down_screen/count_downPresenter.hpp>
+#include <gui/alarm_screen/alarmView.hpp>
+#include <gui/alarm_screen/alarmPresenter.hpp>
+#include <gui/alarmmmmm_screen/alarmmmmmView.hpp>
+#include <gui/alarmmmmm_screen/alarmmmmmPresenter.hpp>
 
 
 /**
@@ -47,8 +78,13 @@ public:
     typedef meta::TypeList< Screen1View,
             meta::TypeList< Screen2View,
             meta::TypeList< mainView,
-            meta::TypeList< Screen3View,
-            meta::Nil > > >
+            meta::TypeList< calendarView,
+            meta::TypeList< count_upView,
+            meta::TypeList< count_up2View,
+            meta::TypeList< count_downView,
+            meta::TypeList< alarmView,
+            meta::TypeList< alarmmmmmView,
+            meta::Nil > > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -63,8 +99,13 @@ public:
     typedef meta::TypeList< Screen1Presenter,
             meta::TypeList< Screen2Presenter,
             meta::TypeList< mainPresenter,
-            meta::TypeList< Screen3Presenter,
-            meta::Nil > > >
+            meta::TypeList< calendarPresenter,
+            meta::TypeList< count_upPresenter,
+            meta::TypeList< count_up2Presenter,
+            meta::TypeList< count_downPresenter,
+            meta::TypeList< alarmPresenter,
+            meta::TypeList< alarmmmmmPresenter,
+            meta::Nil > > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -89,7 +130,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoScreen1ScreenNoTransition();
+        app.gotoalarmScreenNoTransition();
     }
 protected:
     FrontendHeapBase(AbstractPartition& presenters, AbstractPartition& views, AbstractPartition& transitions, FrontendApplication& app)

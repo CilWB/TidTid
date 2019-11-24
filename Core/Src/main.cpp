@@ -1469,14 +1469,14 @@ void StartBlink01(void const * argument)
   for(;;)
   {
 		//rtc();
-		//if(HAL_GPIO_ReadPin(GPIOI,GPIO_PIN_11)==GPIO_PIN_SET){
-		//	buttonCount++;
-		//	osDelay(200);
-		//}
+		if(HAL_GPIO_ReadPin(GPIOI,GPIO_PIN_11)==GPIO_PIN_SET){
+			buttonCount++;
+			osDelay(200);
+		}
 		//rtc();
 		
-		HAL_UART_Receive_IT(&huart6,ch,5);
-		osDelay(1000);
+		//HAL_UART_Receive_IT(&huart6,ch,5);
+		osDelay(1);
   }
   /* USER CODE END StartBlink01 */
 }

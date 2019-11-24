@@ -86,6 +86,42 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  gui/include/gui/main_screen/mainView.hpp \
  generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp \
  gui/include/gui/main_screen/mainPresenter.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/Buttons.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/BoxWithBorder.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AnimatedImage.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TiledImage.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
+ gui/include/gui/calendar_screen/calendarView.hpp \
+ generated/gui_generated/include/gui_generated/calendar_screen/calendarViewBase.hpp \
+ gui/include/gui/calendar_screen/calendarPresenter.hpp \
+ gui/include/gui/count_up_screen/count_upView.hpp \
+ generated/gui_generated/include/gui_generated/count_up_screen/count_upViewBase.hpp \
+ gui/include/gui/count_up_screen/count_upPresenter.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ToggleButton.hpp \
+ gui/include/gui/count_up2_screen/count_up2View.hpp \
+ generated/gui_generated/include/gui_generated/count_up2_screen/count_up2ViewBase.hpp \
+ gui/include/gui/count_up2_screen/count_up2Presenter.hpp \
+ gui/include/gui/count_down_screen/count_downView.hpp \
+ generated/gui_generated/include/gui_generated/count_down_screen/count_downViewBase.hpp \
+ gui/include/gui/count_down_screen/count_downPresenter.hpp \
+ gui/include/gui/alarm_screen/alarmView.hpp \
+ generated/gui_generated/include/gui_generated/alarm_screen/alarmViewBase.hpp \
+ gui/include/gui/alarm_screen/alarmPresenter.hpp \
+ gui/include/gui/alarmmmmm_screen/alarmmmmmView.hpp \
+ generated/gui_generated/include/gui_generated/alarmmmmm_screen/alarmmmmmViewBase.hpp \
+ gui/include/gui/alarmmmmm_screen/alarmmmmmPresenter.hpp \
  generated/images/include/BitmapDatabase.hpp \
  generated/gui_generated/include/gui_generated/common/SimConstants.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/platform/driver/touch/SDL2TouchController.hpp \
@@ -265,6 +301,78 @@ gui/include/gui/main_screen/mainView.hpp:
 generated/gui_generated/include/gui_generated/main_screen/mainViewBase.hpp:
 
 gui/include/gui/main_screen/mainPresenter.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/Buttons.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/ClickButtonTrigger.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/AbstractButtonContainer.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/ToggleButtonTrigger.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TouchButtonTrigger.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/BoxWithBorderButtonStyle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/BoxWithBorder.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/IconButtonStyle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/ImageButtonStyle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/AnimatedImageButtonStyle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/AnimatedImage.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TextButtonStyle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TiledImage.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
+
+gui/include/gui/calendar_screen/calendarView.hpp:
+
+generated/gui_generated/include/gui_generated/calendar_screen/calendarViewBase.hpp:
+
+gui/include/gui/calendar_screen/calendarPresenter.hpp:
+
+gui/include/gui/count_up_screen/count_upView.hpp:
+
+generated/gui_generated/include/gui_generated/count_up_screen/count_upViewBase.hpp:
+
+gui/include/gui/count_up_screen/count_upPresenter.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ToggleButton.hpp:
+
+gui/include/gui/count_up2_screen/count_up2View.hpp:
+
+generated/gui_generated/include/gui_generated/count_up2_screen/count_up2ViewBase.hpp:
+
+gui/include/gui/count_up2_screen/count_up2Presenter.hpp:
+
+gui/include/gui/count_down_screen/count_downView.hpp:
+
+generated/gui_generated/include/gui_generated/count_down_screen/count_downViewBase.hpp:
+
+gui/include/gui/count_down_screen/count_downPresenter.hpp:
+
+gui/include/gui/alarm_screen/alarmView.hpp:
+
+generated/gui_generated/include/gui_generated/alarm_screen/alarmViewBase.hpp:
+
+gui/include/gui/alarm_screen/alarmPresenter.hpp:
+
+gui/include/gui/alarmmmmm_screen/alarmmmmmView.hpp:
+
+generated/gui_generated/include/gui_generated/alarmmmmm_screen/alarmmmmmViewBase.hpp:
+
+gui/include/gui/alarmmmmm_screen/alarmmmmmPresenter.hpp:
 
 generated/images/include/BitmapDatabase.hpp:
 
