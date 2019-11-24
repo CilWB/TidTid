@@ -239,7 +239,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId7",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "mont_val",
             "X": 46,
@@ -267,7 +267,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId9",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "date_val",
             "X": 116,
@@ -295,7 +295,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId11",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "temp_val",
             "X": 184,

@@ -35,7 +35,18 @@ public:
      * the ModelListener interface.
      */
     void tick();
+		void setCLK();
+		void updateTime();
+		
 		int getC();
+		int getSec_();
+		int getMin_();
+		int getHour_();
+		int getDay_();
+		int getDate_();
+		int getMonth_();
+		int getYear_();
+		int getTemp_();
 		
 protected:
     /**
@@ -43,6 +54,15 @@ protected:
      */
     ModelListener* modelListener;
 		int c;
+
+		static int sec_;
+		static int min_;
+		static int hour_;
+		static int day_;
+		static int date_;
+		static int month_;
+		static int year_;
+		
 
 };
 

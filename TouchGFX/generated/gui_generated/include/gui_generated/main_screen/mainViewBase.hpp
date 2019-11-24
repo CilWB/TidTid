@@ -56,11 +56,11 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t MONT_VAL_SIZE = 2;
+    static const uint16_t MONT_VAL_SIZE = 3;
     touchgfx::Unicode::UnicodeChar mont_valBuffer[MONT_VAL_SIZE];
-    static const uint16_t DATE_VAL_SIZE = 2;
+    static const uint16_t DATE_VAL_SIZE = 3;
     touchgfx::Unicode::UnicodeChar date_valBuffer[DATE_VAL_SIZE];
-    static const uint16_t TEMP_VAL_SIZE = 2;
+    static const uint16_t TEMP_VAL_SIZE = 3;
     touchgfx::Unicode::UnicodeChar temp_valBuffer[TEMP_VAL_SIZE];
     static const uint16_t YEAR_VAL_SIZE = 5;
     touchgfx::Unicode::UnicodeChar year_valBuffer[YEAR_VAL_SIZE];

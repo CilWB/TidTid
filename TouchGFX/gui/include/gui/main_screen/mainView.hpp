@@ -11,6 +11,7 @@ public:
     virtual ~mainView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+		void updateTimee(int sec,int min,int hour,int day,int date,int month,int year,int tmep);
 protected:
 };
 

@@ -79,3 +79,4 @@ tidtid02\mainview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touch
 tidtid02\mainview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp
 tidtid02\mainview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp
 tidtid02\mainview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp
+tidtid02\mainview.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/Color.hpp

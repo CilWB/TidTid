@@ -24,9 +24,9 @@ public:
      * (ie. made inactive). Teardown functionality can be placed here.
      */
     virtual void deactivate();
-
+		virtual void updateTime();
     virtual ~mainPresenter() {};
-
+		
 private:
     mainPresenter();
 

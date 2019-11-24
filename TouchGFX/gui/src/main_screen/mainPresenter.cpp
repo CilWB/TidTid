@@ -15,3 +15,22 @@ void mainPresenter::deactivate()
 {
 
 }
+
+
+
+void mainPresenter::updateTime()
+{
+	
+	view.updateTimee(
+	//model->getC(),
+	model->getSec_(),
+	model->getMin_(),
+	model->getHour_(),
+	model->getDay_(),
+	model->getDate_(),
+	model->getMonth_(),
+	model->getYear_(),
+	model->getTemp_()
+	
+	);
+}

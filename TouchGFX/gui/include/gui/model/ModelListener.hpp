@@ -29,6 +29,7 @@ public:
     }
 		
 		virtual void checkClick(){}
+		virtual void updateTime(){}
 			
 protected:
     Model* model;

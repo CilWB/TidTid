@@ -77,6 +77,9 @@ UART_HandleTypeDef huart6;
 osThreadId defaultTaskHandle;
 osThreadId blink01Handle;
 osThreadId blink02Handle;
+osThreadId readRTCHandle;
+osThreadId readUARTHandle;
+osThreadId vibrateHandle;
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -105,6 +108,9 @@ extern void GRAPHICS_MainTask(void);
 void StartDefaultTask(void const * argument);
 void StartBlink01(void const * argument);
 void StartBlink02(void const * argument);
+void ReadRTC(void const * argument);
+void ReadUART(void const * argument);
+void Vibrate(void const * argument);
 
 /* USER CODE BEGIN PFP */
 
@@ -122,7 +128,7 @@ void temp(void);
 uint8_t atxbuffx[8];
 uint8_t cmdBuffer[3];
 uint8_t databuff[8];
-uint16_t sec,min,hour,day,date,month,year,year4;
+int sec,min,hour,day,date,month,year,year4;
 char str[100];
 uint8_t BCD2DEC(uint8_t data);
 uint8_t DEC2BCD(uint8_t data);
@@ -133,13 +139,29 @@ uint16_t CRC16_2(uint8_t *,uint8_t );
 uint8_t ch[50];
 uint8_t dayOfWeek(int thn, int bln, int tgl);
 
+int mode = 0;
 int buttonCount=0;
-/* USER CODE END 0 */
-void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
-{
-	HAL_UART_Receive_IT(&huart6, ch, 5);
-}	
 
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
+
+		if(ch[0]>='0'&&ch[0]<='9' && ch[1]>='0'&&ch[1]<='9' ){
+			t = (ch[0]-'0')*10 + (ch[1]-'0');
+		}
+		if(ch[2]>='0'&&ch[2]<='9' && ch[3]>='0'&&ch[3]<='9' ){
+			h = (ch[2]-'0')*10 + (ch[3]-'0');
+		}
+		if(ch[4]>='0'&&ch[4]<='3'){
+			mode = ch[4]-'0';
+		}
+		
+		HAL_UART_Receive_IT(&huart6,ch,5);
+}
+
+
+
+/* USER CODE END 0 */
+	
 /**
   * @brief  The application entry point.
   * @retval int
@@ -157,7 +179,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+		HAL_UART_Receive_IT(&huart6,ch,5);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -195,8 +217,8 @@ int main(void)
   /* Initialise the graphical stack engine */
   GRAPHICS_Init();
       
-	//HAL_UART_Receive_IT(&huart6, ch, 8);
-	
+  
+
   /* USER CODE BEGIN RTOS_MUTEX */
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
@@ -223,14 +245,26 @@ int main(void)
   blink01Handle = osThreadCreate(osThread(blink01), NULL);
 
   /* definition and creation of blink02 */
-  osThreadDef(blink02, StartBlink02, osPriorityNormal, 0, 128);
+  osThreadDef(blink02, StartBlink02, osPriorityBelowNormal, 0, 128);
   blink02Handle = osThreadCreate(osThread(blink02), NULL);
+
+  /* definition and creation of readRTC */
+  osThreadDef(readRTC, ReadRTC, osPriorityNormal, 0, 128);
+  readRTCHandle = osThreadCreate(osThread(readRTC), NULL);
+
+  /* definition and creation of readUART */
+  osThreadDef(readUART, ReadUART, osPriorityNormal, 0, 128);
+  readUARTHandle = osThreadCreate(osThread(readUART), NULL);
+
+  /* definition and creation of vibrate */
+  osThreadDef(vibrate, Vibrate, osPriorityNormal, 0, 128);
+  vibrateHandle = osThreadCreate(osThread(vibrate), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
-	
-	/* Start scheduler */
+
+  /* Start scheduler */
   osKernelStart();
   
   /* We should never get here as control is now taken by the scheduler */
@@ -671,7 +705,7 @@ static void MX_SAI2_Init(void)
   hsai_BlockB2.Init.MonoStereoMode = SAI_STEREOMODE;
   hsai_BlockB2.Init.CompandingMode = SAI_NOCOMPANDING;
   hsai_BlockB2.Init.TriState = SAI_OUTPUT_NOTRELEASED;
-  hsai_BlockB2.FrameInit.FrameLength = 8;
+  hsai_BlockB2.FrameInit.FrameLength = 24;
   hsai_BlockB2.FrameInit.ActiveFrameLength = 1;
   hsai_BlockB2.FrameInit.FSDefinition = SAI_FS_STARTFRAME;
   hsai_BlockB2.FrameInit.FSPolarity = SAI_FS_ACTIVE_LOW;
@@ -1471,11 +1505,7 @@ void StartBlink01(void const * argument)
 		//rtc();
 		if(HAL_GPIO_ReadPin(GPIOI,GPIO_PIN_11)==GPIO_PIN_SET){
 			buttonCount++;
-			osDelay(200);
 		}
-		//rtc();
-		
-		HAL_UART_Receive_IT(&huart6,ch,5);
 		osDelay(1);
   }
   /* USER CODE END StartBlink01 */
@@ -1494,11 +1524,67 @@ void StartBlink02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		//HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
-    rtc();
-		osDelay(500);
+		HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
+		osDelay(1);
   }
   /* USER CODE END StartBlink02 */
+}
+
+/* USER CODE BEGIN Header_ReadRTC */
+/**
+* @brief Function implementing the readRTC thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_ReadRTC */
+void ReadRTC(void const * argument)
+{
+  /* USER CODE BEGIN ReadRTC */
+  /* Infinite loop */
+  for(;;)
+  {
+		rtc();
+    osDelay(1);
+  }
+  /* USER CODE END ReadRTC */
+}
+
+/* USER CODE BEGIN Header_ReadUART */
+/**
+* @brief Function implementing the readUART thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_ReadUART */
+void ReadUART(void const * argument)
+{
+  /* USER CODE BEGIN ReadUART */
+  /* Infinite loop */
+  for(;;)
+  {
+		
+		HAL_UART_Receive_IT(&huart6,ch,5);
+    osDelay(1000);
+  }
+  /* USER CODE END ReadUART */
+}
+
+/* USER CODE BEGIN Header_Vibrate */
+/**
+* @brief Function implementing the vibrate thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Vibrate */
+void Vibrate(void const * argument)
+{
+  /* USER CODE BEGIN Vibrate */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Vibrate */
 }
 
 /**
