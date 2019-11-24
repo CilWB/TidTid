@@ -67,7 +67,8 @@ build/MINGW32_NT-6.2/gui/src/main_screen/mainView.o: \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TiledImageButtonStyle.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/TiledImage.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp \
- ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp \
+ ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp
 
 gui/include/gui/main_screen/mainView.hpp:
 
@@ -204,3 +205,5 @@ gui/include/gui/model/ModelListener.hpp:
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/WildcardTextButtonStyle.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/containers/buttons/TwoWildcardTextButtonStyle.hpp:
+
+../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/Color.hpp:

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [TidTid02\TidTid02.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image TidTid02\TidTid02.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Nov 25 03:22:23 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Mon Nov 25 03:32:14 2019
 <BR><P>
 <H3>Maximum Stack Usage =        728 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -3685,7 +3685,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> mainpresenter.o(.constdata__ZTV13mainPresenter)
 </UL>
 <P><STRONG><a name="[103]"></a>mainPresenter::updateTime()</STRONG> (Thumb, 92 bytes, Stack size 56 bytes, mainpresenter.o(i._ZN13mainPresenter10updateTimeEv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 512<LI>Call Chain = mainPresenter::updateTime() &rArr; mainView::updateTimee(int, int, int, int, int, int, int, int) &rArr; touchgfx::Unicode::snprintf(unsigned short*, unsigned short, const char*, ...) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const char*, std::__va_list) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const unsigned short*, std::__va_list) &rArr; touchgfx::Unicode::itoa(int, unsigned short*, unsigned short, int) &rArr; touchgfx::Unicode::strncpy(unsigned short*, const char*, unsigned short)
+<BR><BR>[Stack]<UL><LI>Max Depth = 520<LI>Call Chain = mainPresenter::updateTime() &rArr; mainView::updateTimee(int, int, int, int, int, int, int, int) &rArr; touchgfx::Unicode::snprintf(unsigned short*, unsigned short, const char*, ...) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const char*, std::__va_list) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const unsigned short*, std::__va_list) &rArr; touchgfx::Unicode::itoa(int, unsigned short*, unsigned short, int) &rArr; touchgfx::Unicode::strncpy(unsigned short*, const char*, unsigned short)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[331]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainView::updateTimee(int, int, int, int, int, int, int, int)
 <LI><a href="#[32b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Model::getMonth_()
@@ -4424,8 +4424,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> mainview.o(.constdata__ZTV8mainView)
 </UL>
-<P><STRONG><a name="[331]"></a>mainView::updateTimee(int, int, int, int, int, int, int, int)</STRONG> (Thumb, 192 bytes, Stack size 32 bytes, mainview.o(i._ZN8mainView11updateTimeeEiiiiiiii))
-<BR><BR>[Stack]<UL><LI>Max Depth = 456<LI>Call Chain = mainView::updateTimee(int, int, int, int, int, int, int, int) &rArr; touchgfx::Unicode::snprintf(unsigned short*, unsigned short, const char*, ...) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const char*, std::__va_list) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const unsigned short*, std::__va_list) &rArr; touchgfx::Unicode::itoa(int, unsigned short*, unsigned short, int) &rArr; touchgfx::Unicode::strncpy(unsigned short*, const char*, unsigned short)
+<P><STRONG><a name="[331]"></a>mainView::updateTimee(int, int, int, int, int, int, int, int)</STRONG> (Thumb, 382 bytes, Stack size 40 bytes, mainview.o(i._ZN8mainView11updateTimeeEiiiiiiii))
+<BR><BR>[Stack]<UL><LI>Max Depth = 464<LI>Call Chain = mainView::updateTimee(int, int, int, int, int, int, int, int) &rArr; touchgfx::Unicode::snprintf(unsigned short*, unsigned short, const char*, ...) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const char*, std::__va_list) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const unsigned short*, std::__va_list) &rArr; touchgfx::Unicode::itoa(int, unsigned short*, unsigned short, int) &rArr; touchgfx::Unicode::strncpy(unsigned short*, const char*, unsigned short)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::Drawable::invalidate() const
 <LI><a href="#[308]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;touchgfx::Unicode::snprintf(unsigned short*, unsigned short, const char*, ...)
@@ -7312,7 +7312,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[105]"></a>thunk{-4} to mainPresenter::updateTime()</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, mainpresenter.o(i._ZThn4_N13mainPresenter10updateTimeEv))
-<BR><BR>[Stack]<UL><LI>Max Depth = 512<LI>Call Chain = thunk{-4} to mainPresenter::updateTime() &rArr; mainPresenter::updateTime() &rArr; mainView::updateTimee(int, int, int, int, int, int, int, int) &rArr; touchgfx::Unicode::snprintf(unsigned short*, unsigned short, const char*, ...) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const char*, std::__va_list) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const unsigned short*, std::__va_list) &rArr; touchgfx::Unicode::itoa(int, unsigned short*, unsigned short, int) &rArr; touchgfx::Unicode::strncpy(unsigned short*, const char*, unsigned short)
+<BR><BR>[Stack]<UL><LI>Max Depth = 520<LI>Call Chain = thunk{-4} to mainPresenter::updateTime() &rArr; mainPresenter::updateTime() &rArr; mainView::updateTimee(int, int, int, int, int, int, int, int) &rArr; touchgfx::Unicode::snprintf(unsigned short*, unsigned short, const char*, ...) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const char*, std::__va_list) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const unsigned short*, std::__va_list) &rArr; touchgfx::Unicode::itoa(int, unsigned short*, unsigned short, int) &rArr; touchgfx::Unicode::strncpy(unsigned short*, const char*, unsigned short)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainPresenter::updateTime()
 </UL>
@@ -8080,7 +8080,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FrontendApplicationBase::gotocount_downScreenNoTransitionImpl()
 </UL>
 
-<P><STRONG><a name="[345]"></a>T2* touchgfx::makeTransition&lang;mainView, mainPresenter, touchgfx::NoTransition, Model&rang;(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, T4*)</STRONG> (Thumb, 174 bytes, Stack size 32 bytes, frontendapplicationbase.o(t._ZN8touchgfx14makeTransitionI8mainView13mainPresenterNS_12NoTransitionE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_))
+<P><STRONG><a name="[345]"></a>T2* touchgfx::makeTransition&lang;mainView, mainPresenter, touchgfx::NoTransition, Model&rang;(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, T4*)</STRONG> (Thumb, 176 bytes, Stack size 32 bytes, frontendapplicationbase.o(t._ZN8touchgfx14makeTransitionI8mainView13mainPresenterNS_12NoTransitionE5ModelEEPT0_PPNS_6ScreenEPPNS_9PresenterERNS_7MVPHeapEPPNS_10TransitionEPT2_))
 <BR><BR>[Stack]<UL><LI>Max Depth = 624<LI>Call Chain = T2* touchgfx::makeTransition&lang;mainView, mainPresenter, touchgfx::NoTransition, Model&rang;(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, T4*) &rArr; mainView::mainView() &rArr; mainViewBase::mainViewBase() &rArr; touchgfx::Unicode::snprintf(unsigned short*, unsigned short, const char*, ...) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const char*, std::__va_list) &rArr; touchgfx::Unicode::vsnprintf(unsigned short*, unsigned short, const unsigned short*, std::__va_list) &rArr; touchgfx::Unicode::itoa(int, unsigned short*, unsigned short, int) &rArr; touchgfx::Unicode::strncpy(unsigned short*, const char*, unsigned short)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[34f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainView::mainView()

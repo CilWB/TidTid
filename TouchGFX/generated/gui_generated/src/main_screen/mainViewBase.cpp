@@ -91,7 +91,7 @@ mainViewBase::mainViewBase() :
     SUN.setTypedText(TypedText(T_SINGLEUSEID25));
 
     MON.setXY(109, 236);
-    MON.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    MON.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
     MON.setLinespacing(0);
     MON.setTypedText(TypedText(T_SINGLEUSEID26));
 
@@ -111,7 +111,7 @@ mainViewBase::mainViewBase() :
     THU.setTypedText(TypedText(T_SINGLEUSEID29));
 
     FRI.setXY(350, 236);
-    FRI.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
+    FRI.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     FRI.setLinespacing(0);
     FRI.setTypedText(TypedText(T_SINGLEUSEID30));
 

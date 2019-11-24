@@ -547,10 +547,6 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
-            },
             "Name": "SUN",
             "X": 50,
             "Y": 236,
@@ -567,17 +563,13 @@
             "TextId": "SingleUseId26",
             "TextRotation": "0",
             "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Red": 218,
+              "Green": 19,
+              "Blue": 19
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
-            },
             "Name": "MON",
             "X": 109,
             "Y": 236,
@@ -601,10 +593,6 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
-            },
             "Name": "TUE",
             "X": 175,
             "Y": 236,
@@ -628,10 +616,6 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
-            },
             "Name": "WED",
             "X": 229,
             "Y": 236,
@@ -655,10 +639,6 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
-            },
             "Name": "THU",
             "X": 291,
             "Y": 236,
@@ -675,17 +655,13 @@
             "TextId": "SingleUseId30",
             "TextRotation": "0",
             "Color": {
-              "Red": 218,
-              "Green": 19,
-              "Blue": 19
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
             },
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
-            },
             "Name": "FRI",
             "X": 350,
             "Y": 236,
@@ -709,10 +685,6 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Wildcard1": {
-              "UseBuffer": false,
-              "BufferSize": 0
-            },
             "Name": "SAT",
             "X": 398,
             "Y": 236,

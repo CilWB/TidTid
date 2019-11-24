@@ -36,7 +36,30 @@ void mainView::updateTimee(int sec,int min,int hour,int day,int date,int month,i
 	minutes_val.invalidate();
 	sec_val.invalidate();
 	
-	TEMP.setColor(touchgfx::Color::getColorFrom24BitRGB(0,150,0));
+	
+	SUN.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0xFF,0xFF));
+	MON.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0xFF,0xFF));
+	TUE.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0xFF,0xFF));
+	WED.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0xFF,0xFF));
+	THU.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0xFF,0xFF));
+	FRI.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0xFF,0xFF));
+	SAT.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0xFF,0xFF));
+	switch(day){
+		case 0: SUN.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0,0));
+						break;
+		case 1: MON.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0,0));
+						break;
+		case 2: TUE.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0,0));
+						break;
+		case 3: WED.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0,0));
+						break;
+		case 4: THU.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0,0));
+						break;
+		case 5: FRI.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0,0));
+						break;
+		case 6: SAT.setColor(touchgfx::Color::getColorFrom24BitRGB(0xFF,0,0));
+						break;
+	}
 	//SUN.setColor(touchgfx::Color::getColorFrom24BitRGB(0,150,0));
 		
 }

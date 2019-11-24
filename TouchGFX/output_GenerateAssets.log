@@ -1,1 +1,18 @@
 Converting images
+Generating generated/fonts/UnicodeListDigitalt_19_4.txt
+Generating generated/fonts/UnicodeListDigitalt_20_4.txt
+Generating generated/fonts/UnicodeListDigitalt_29_4.txt
+Generating generated/fonts/UnicodeListDigitalt_30_4.txt
+Generating generated/fonts/UnicodeListDigitalt_90_4.txt
+Generating generated/fonts/UnicodeListOpenSans_Bold_20_4.txt
+Generating generated/fonts/UnicodeListimpact_20_4.txt
+Generating generated/fonts/UnicodeListsegoeuib_16_4.txt
+Generating generated/fonts/UnicodeListsegoeuib_18_4.txt
+Generating generated/fonts/src/ApplicationFontProvider.cpp
+Generating generated/fonts/include/fonts/ApplicationFontProvider.hpp
+Generating generated/texts/include/texts/TextKeysAndLanguages.hpp
+Generating generated/texts/src/Texts.cpp
+Generating generated/texts/src/LanguageGb.cpp
+Generating generated/texts/include/texts/TypedTextDatabase.hpp
+Generating generated/texts/src/TypedTextDatabase.cpp
+Remapped 111 strings (478 bytes saved)
