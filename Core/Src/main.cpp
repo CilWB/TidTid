@@ -1475,7 +1475,7 @@ void StartBlink01(void const * argument)
 		}
 		//rtc();
 		
-		//HAL_UART_Receive_IT(&huart6,ch,5);
+		HAL_UART_Receive_IT(&huart6,ch,5);
 		osDelay(1);
   }
   /* USER CODE END StartBlink01 */

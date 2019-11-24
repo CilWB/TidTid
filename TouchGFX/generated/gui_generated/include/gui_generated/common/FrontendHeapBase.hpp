@@ -130,7 +130,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoalarmScreenNoTransition();
+        app.gotomainScreenNoTransition();
     }
 protected:
     FrontendHeapBase(AbstractPartition& presenters, AbstractPartition& views, AbstractPartition& transitions, FrontendApplication& app)

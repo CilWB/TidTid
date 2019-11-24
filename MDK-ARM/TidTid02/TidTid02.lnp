@@ -137,6 +137,8 @@
 "tidtid02\mainviewbase.o"
 "tidtid02\reset.o"
 "tidtid02\reset1.o"
+"tidtid02\save.o"
+"tidtid02\save2.o"
 "tidtid02\screen1viewbase.o"
 "tidtid02\screen2viewbase.o"
 "tidtid02\snooze.o"
