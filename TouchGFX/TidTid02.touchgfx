@@ -3654,7 +3654,7 @@
             "Pressed": "save2.png",
             "Released": "save.png",
             "Alpha": 255,
-            "Name": "button1",
+            "Name": "save",
             "X": 88,
             "Y": 82,
             "Width": 38,
@@ -3705,6 +3705,66 @@
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "calendar",
               "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "Interaction4",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "down_min",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "downMin",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "up_min",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "upMin",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Interaction6",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "down_h",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "downHour",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Interaction7",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "up_h",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "upHour",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Interaction8",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "save",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "saveAlram",
+              "Type": "ActionCustom"
             }
           }
         ],

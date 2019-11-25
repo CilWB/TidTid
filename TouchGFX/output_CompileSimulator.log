@@ -1,9 +1,4 @@
 Converting images
-Compiling gui/src/count_up_screen/count_upPresenter.cpp
-Compiling gui/src/count_up_screen/count_upView.cpp
-Compiling generated/gui_generated/src/common/FrontendApplicationBase.cpp
-Compiling generated/gui_generated/src/count_up_screen/count_upViewBase.cpp
-Compiling simulator/main.cpp
 Linking build/bin/simulator.exe
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model4getCEv':
 C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:34: undefined reference to `buttonCount'

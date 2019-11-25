@@ -61,18 +61,23 @@ alarmViewBase::alarmViewBase() :
 
     up_h.setXY(176, 182);
     up_h.setBitmaps(Bitmap(BITMAP_UP_R_ID), Bitmap(BITMAP_UP_R2_ID));
+    up_h.setAction(buttonCallback);
 
     down_h.setXY(294, 182);
     down_h.setBitmaps(Bitmap(BITMAP_DOWN_R_ID), Bitmap(BITMAP_DOWN_R2_ID));
+    down_h.setAction(buttonCallback);
 
     up_min.setXY(176, 61);
     up_min.setBitmaps(Bitmap(BITMAP_UP_R_ID), Bitmap(BITMAP_UP_R2_ID));
+    up_min.setAction(buttonCallback);
 
     down_min.setXY(294, 61);
     down_min.setBitmaps(Bitmap(BITMAP_DOWN_R_ID), Bitmap(BITMAP_DOWN_R2_ID));
+    down_min.setAction(buttonCallback);
 
-    button1.setXY(88, 82);
-    button1.setBitmaps(Bitmap(BITMAP_SAVE_ID), Bitmap(BITMAP_SAVE2_ID));
+    save.setXY(88, 82);
+    save.setBitmaps(Bitmap(BITMAP_SAVE_ID), Bitmap(BITMAP_SAVE2_ID));
+    save.setAction(buttonCallback);
 
     add(box1);
     add(ALARM);
@@ -86,7 +91,7 @@ alarmViewBase::alarmViewBase() :
     add(down_h);
     add(up_min);
     add(down_min);
-    add(button1);
+    add(save);
 }
 
 void alarmViewBase::setupScreen()
@@ -98,23 +103,38 @@ void alarmViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
     if (&src == &up_h)
     {
-
+        //Interaction7
+        //When up_h clicked call virtual function
+        //Call upHour
+        upHour();
     }
     else if (&src == &down_h)
     {
-
+        //Interaction6
+        //When down_h clicked call virtual function
+        //Call downHour
+        downHour();
     }
     else if (&src == &up_min)
     {
-
+        //Interaction5
+        //When up_min clicked call virtual function
+        //Call upMin
+        upMin();
     }
     else if (&src == &down_min)
     {
-
+        //Interaction4
+        //When down_min clicked call virtual function
+        //Call downMin
+        downMin();
     }
-    else if (&src == &button1)
+    else if (&src == &save)
     {
-
+        //Interaction8
+        //When save clicked call virtual function
+        //Call saveAlram
+        saveAlram();
     }
 }
 

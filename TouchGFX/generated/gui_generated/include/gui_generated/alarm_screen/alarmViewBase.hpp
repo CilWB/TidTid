@@ -21,6 +21,34 @@ public:
 
     virtual void setupScreen();
 
+    /*
+     * Custom Action Handlers
+     */
+    virtual void downMin()
+    {
+        // Override and implement this function in alarmView
+    }
+
+    virtual void upMin()
+    {
+        // Override and implement this function in alarmView
+    }
+
+    virtual void downHour()
+    {
+        // Override and implement this function in alarmView
+    }
+
+    virtual void upHour()
+    {
+        // Override and implement this function in alarmView
+    }
+
+    virtual void saveAlram()
+    {
+        // Override and implement this function in alarmView
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
@@ -41,7 +69,7 @@ protected:
     touchgfx::Button down_h;
     touchgfx::Button up_min;
     touchgfx::Button down_min;
-    touchgfx::Button button1;
+    touchgfx::Button save;
 
     /*
      * Wildcard Buffers
