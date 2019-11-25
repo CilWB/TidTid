@@ -39,6 +39,7 @@ count_upViewBase::count_upViewBase() :
 
     start_but.setXY(186, 31);
     start_but.setBitmaps(Bitmap(BITMAP_STST_ID), Bitmap(BITMAP_STTS_ID));
+    start_but.setAction(buttonCallback);
 
     flexButton1.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1.setBorderSize(5);
@@ -66,9 +67,11 @@ count_upViewBase::count_upViewBase() :
 
     stop_but.setXY(51, 31);
     stop_but.setBitmaps(Bitmap(BITMAP_STT_ID), Bitmap(BITMAP_STOP1_ID));
+    stop_but.setAction(buttonCallback);
 
     reset_but.setXY(321, 31);
     reset_but.setBitmaps(Bitmap(BITMAP_STTSST_ID), Bitmap(BITMAP_RESET1_ID));
+    reset_but.setAction(buttonCallback);
 
     add(box1);
     add(min_val);
@@ -97,15 +100,24 @@ void count_upViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
     }
     else if (&src == &start_but)
     {
-
+        //Interaction7
+        //When start_but clicked call virtual function
+        //Call up_start
+        up_start();
     }
     else if (&src == &stop_but)
     {
-
+        //Interaction6
+        //When stop_but clicked call virtual function
+        //Call up_stop
+        up_stop();
     }
     else if (&src == &reset_but)
     {
-
+        //Interaction5
+        //When reset_but clicked call virtual function
+        //Call up_reset
+        up_reset();
     }
 }
 

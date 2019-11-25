@@ -19,6 +19,6 @@ void calendarPresenter::deactivate()
 void calendarPresenter::updateCalendar()
 {
 	view.genCalendar(model->getDay_(),model->getDate_(),model->getMonth_(),model->getYear_());
-	view.move(model->getC());
+	view.move(model->getC()%4);
 }
 

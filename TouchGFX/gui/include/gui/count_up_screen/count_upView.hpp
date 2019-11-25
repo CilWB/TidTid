@@ -11,7 +11,19 @@ public:
     virtual ~count_upView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+			
+		
+    virtual void up_reset();
+    virtual void up_start();
+    virtual void up_stop();
+		
 		void countUP(int tick);
+			int start_time;
+			int status;
+			int get;
+			int cnt_time;
+			int cnt_time2;
+			int resume;
 protected:
 };
 

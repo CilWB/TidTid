@@ -4,6 +4,7 @@
 extern int buttonCount;
 extern float t,h;
 extern int sec,min,hour,day,date,month,year,year4;
+extern unsigned int count_c;
 Model::Model() : modelListener(0),c(0.0),tickk(0)
 {
 	
@@ -34,6 +35,7 @@ int Model::getC()
 }
 
 int Model::getTickk_(){
+	//return count_c/8.8;
 	return tickk;
 }
 

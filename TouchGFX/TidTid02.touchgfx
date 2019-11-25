@@ -2823,6 +2823,42 @@
               "ActionComponent": "count_down",
               "Type": "ActionGotoScreen"
             }
+          },
+          {
+            "InteractionName": "Interaction5",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "reset_but",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "up_reset",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Interaction6",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "stop_but",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "up_stop",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "Interaction7",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "start_but",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "up_start",
+              "Type": "ActionCustom"
+            }
           }
         ],
         "Name": "count_up",

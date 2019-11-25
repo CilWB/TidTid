@@ -29,6 +29,14 @@ Project File Date:  11/25/2019
 *** Warning: You are compiling one or more files of source type C++ and have selected 'use MicroLIB'. MicroLIB does not support C++!
   
 Build target 'TidTid02'
+compiling count_upPresenter.cpp...
+../TouchGFX/gui/include/gui/count_up_screen/count_upPresenter.hpp(30): warning:  #1300-D: updateCountUp inherits implicit virtual
+  		void updateCountUp();
+../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp(108): warning:  #1300-D: handleClickEvent inherits implicit virtual
+      void handleClickEvent(const touchgfx::ClickEvent& event)
+../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp(139): warning:  #1300-D: handleTickEvent inherits implicit virtual
+      void handleTickEvent()
+../touchgfx/gui/src/count_up_screen/count_uppresenter.cpp: 3 warnings, 0 errors
 compiling count_upView.cpp...
 ../TouchGFX/gui/include/gui/count_up_screen/count_upPresenter.hpp(30): warning:  #1300-D: updateCountUp inherits implicit virtual
   		void updateCountUp();
@@ -36,11 +44,33 @@ compiling count_upView.cpp...
       void handleClickEvent(const touchgfx::ClickEvent& event)
 ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp(139): warning:  #1300-D: handleTickEvent inherits implicit virtual
       void handleTickEvent()
-../touchgfx/gui/src/count_up_screen/count_upview.cpp: 3 warnings, 0 errors
+../touchgfx/gui/src/count_up_screen/count_upview.cpp(71): warning:  #1-D: last line of file ends without a newline
+  }
+../touchgfx/gui/src/count_up_screen/count_upview.cpp: 4 warnings, 0 errors
+compiling FrontendApplicationBase.cpp...
+../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp(108): warning:  #1300-D: handleClickEvent inherits implicit virtual
+      void handleClickEvent(const touchgfx::ClickEvent& event)
+../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp(139): warning:  #1300-D: handleTickEvent inherits implicit virtual
+      void handleTickEvent()
+../TouchGFX/gui/include/gui/calendar_screen/calendarPresenter.hpp(29): warning:  #1300-D: updateCalendar inherits implicit virtual
+  		void updateCalendar();
+../TouchGFX/gui/include/gui/count_up_screen/count_upPresenter.hpp(30): warning:  #1300-D: updateCountUp inherits implicit virtual
+  		void updateCountUp();
+../touchgfx/generated/gui_generated/src/common/frontendapplicationbase.cpp: 4 warnings, 0 errors
+compiling BoardConfiguration.cpp...
+../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp(108): warning:  #1300-D: handleClickEvent inherits implicit virtual
+      void handleClickEvent(const touchgfx::ClickEvent& event)
+../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/containers/buttons/RepeatButtonTrigger.hpp(139): warning:  #1300-D: handleTickEvent inherits implicit virtual
+      void handleTickEvent()
+../TouchGFX/gui/include/gui/calendar_screen/calendarPresenter.hpp(29): warning:  #1300-D: updateCalendar inherits implicit virtual
+  		void updateCalendar();
+../TouchGFX/gui/include/gui/count_up_screen/count_upPresenter.hpp(30): warning:  #1300-D: updateCountUp inherits implicit virtual
+  		void updateCountUp();
+../TouchGFX/target/BoardConfiguration.cpp: 4 warnings, 0 errors
 linking...
-Program Size: Code=91936 RO-data=591344 RW-data=552 ZI-data=51256  
+Program Size: Code=92280 RO-data=591368 RW-data=556 ZI-data=51252  
 FromELF: creating hex file...
-"TidTid02\TidTid02.axf" - 0 Error(s), 3 Warning(s).
+"TidTid02\TidTid02.axf" - 0 Error(s), 15 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -63,7 +93,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.3.0
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:05
 </pre>
 </body>
 </html>
