@@ -26,6 +26,9 @@ public:
     virtual void deactivate();
 
     virtual ~alarmPresenter() {};
+			
+			
+		void updateAlaram();
 
 private:
     alarmPresenter();

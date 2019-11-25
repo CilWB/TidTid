@@ -26,7 +26,6 @@ public:
     virtual void deactivate();
 
     virtual ~alarmmmmmPresenter() {};
-
 private:
     alarmmmmmPresenter();
 

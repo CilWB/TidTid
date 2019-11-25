@@ -39,6 +39,7 @@ public:
 		void updateTime();
 		void updateCalendar();
 		void updateCountUp();
+		void updateAlaram();
 		
 		int getC();
 		int getSec_();

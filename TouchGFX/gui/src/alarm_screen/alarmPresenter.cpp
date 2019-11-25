@@ -15,3 +15,8 @@ void alarmPresenter::deactivate()
 {
 
 }
+
+
+void alarmPresenter::updateAlaram(){
+	view.setSaveAlaram();
+}

@@ -11,7 +11,14 @@ public:
     virtual ~alarmView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+			void setSaveAlaram();
+    virtual void upMin();
+    virtual void upHour();
+    virtual void downHour();
+    virtual void downMin();
+    virtual void saveAlram();
 protected:
+	int show_hr,show_min,alaramHour,alaramMin;
 };
 
 #endif // ALARM_VIEW_HPP

@@ -25,6 +25,9 @@ void Model::tick()
 	
 	// count_up
 	modelListener->updateCountUp();
+	
+	// set alaram
+	modelListener->updateAlaram();
 }
 
 int Model::getC()

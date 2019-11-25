@@ -32,7 +32,7 @@ public:
 		virtual void updateTime(){}
 		virtual void updateCalendar(){}
 		virtual void updateCountUp(){}
-			
+		virtual void updateAlaram(){}
 protected:
     Model* model;
 };

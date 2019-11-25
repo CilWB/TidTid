@@ -51,6 +51,20 @@ void count_upView::countUP(int tick){
 	
 }
 
+void count_upView::move(int page){
+
+	//HAL::getInstance()->setDisplayOrientation(orientation); //set new orientation
+
+  if(page==0) static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreenNoTransition();
+  else if(page==1) 
+		static_cast<FrontendApplication*>(Application::getInstance())->gotocalendarScreenNoTransition();
+ // else if(page==2) 
+//		static_cast<FrontendApplication*>(Application::getInstance())->gotocount_upScreenNoTransition();
+  else if(page==3) 
+		static_cast<FrontendApplication*>(Application::getInstance())->gotoalarmScreenNoTransition();
+	
+}
+
 void count_upView::up_reset(){
 	if(status==2)
 		status = 0;

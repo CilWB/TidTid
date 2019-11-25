@@ -24,6 +24,7 @@ public:
 			int cnt_time;
 			int cnt_time2;
 			int resume;
+			void move(int page);
 protected:
 };
 
