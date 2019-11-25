@@ -13,5 +13,10 @@ void count_upPresenter::activate()
 
 void count_upPresenter::deactivate()
 {
+	
+}
 
+
+void count_upPresenter::updateCountUp(){
+	view.countUP(model->getTickk_());
 }

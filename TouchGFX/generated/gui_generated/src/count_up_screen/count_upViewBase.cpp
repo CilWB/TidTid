@@ -13,31 +13,32 @@ count_upViewBase::count_upViewBase() :
     box1.setPosition(0, 0, 480, 272);
     box1.setColor(touchgfx::Color::getColorFrom24BitRGB(29, 29, 29));
 
-    sec_val.setPosition(246, 82, 93, 98);
-    sec_val.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
-    sec_val.setLinespacing(0);
-    Unicode::snprintf(sec_valBuffer, SEC_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID112).getText());
-    sec_val.setWildcard(sec_valBuffer);
-    sec_val.setTypedText(TypedText(T_SINGLEUSEID111));
+    min_val.setPosition(253, 102, 93, 98);
+    min_val.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
+    min_val.setLinespacing(0);
+    min_val.setRotation(TEXT_ROTATE_180);
+    Unicode::snprintf(min_valBuffer, MIN_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID112).getText());
+    min_val.setWildcard(min_valBuffer);
+    min_val.setTypedText(TypedText(T_SINGLEUSEID111));
 
-    colon.setXY(224, 73);
+    colon.setXY(231, 72);
     colon.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
     colon.setLinespacing(0);
     colon.setTypedText(TypedText(T_SINGLEUSEID113));
 
-    minutes_val.setPosition(129, 82, 93, 98);
-    minutes_val.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
-    minutes_val.setLinespacing(0);
-    Unicode::snprintf(minutes_valBuffer, MINUTES_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID115).getText());
-    minutes_val.setWildcard(minutes_valBuffer);
-    minutes_val.setTypedText(TypedText(T_SINGLEUSEID114));
+    sec_val.setPosition(136, 102, 93, 98);
+    sec_val.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
+    sec_val.setLinespacing(0);
+    sec_val.setRotation(TEXT_ROTATE_180);
+    Unicode::snprintf(sec_valBuffer, SEC_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID115).getText());
+    sec_val.setWildcard(sec_valBuffer);
+    sec_val.setTypedText(TypedText(T_SINGLEUSEID114));
 
-    up.setXY(186, 35);
-    up.setBitmaps(Bitmap(BITMAP_UP_ID), Bitmap(BITMAP_DOWN_ID));
+    up.setXY(186, 213);
+    up.setBitmaps(Bitmap(BITMAP_UPP_ID), Bitmap(BITMAP_DOWNNNN_ID));
 
-    start_but.setXY(186, 217);
-    start_but.setBitmaps(Bitmap(BITMAP_START_ID), Bitmap(BITMAP_START1_ID));
-    start_but.setAction(buttonCallback);
+    start_but.setXY(186, 31);
+    start_but.setBitmaps(Bitmap(BITMAP_STST_ID), Bitmap(BITMAP_STTS_ID));
 
     flexButton1.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1.setBorderSize(5);
@@ -63,16 +64,24 @@ count_upViewBase::count_upViewBase() :
     flexButton1_3.setPosition(0, 154, 26, 24);
     flexButton1_3.setAction(flexButtonCallback);
 
+    stop_but.setXY(51, 31);
+    stop_but.setBitmaps(Bitmap(BITMAP_STT_ID), Bitmap(BITMAP_STOP1_ID));
+
+    reset_but.setXY(321, 31);
+    reset_but.setBitmaps(Bitmap(BITMAP_STTSST_ID), Bitmap(BITMAP_RESET1_ID));
+
     add(box1);
-    add(sec_val);
+    add(min_val);
     add(colon);
-    add(minutes_val);
+    add(sec_val);
     add(up);
     add(start_but);
     add(flexButton1);
     add(flexButton1_1);
     add(flexButton1_2);
     add(flexButton1_3);
+    add(stop_but);
+    add(reset_but);
 }
 
 void count_upViewBase::setupScreen()
@@ -88,10 +97,15 @@ void count_upViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
     }
     else if (&src == &start_but)
     {
-        //click_start_but
-        //When start_but clicked change screen to count_up2
-        //Go to count_up2 with screen transition towards North
-        application().gotocount_up2ScreenSlideTransitionNorth();
+
+    }
+    else if (&src == &stop_but)
+    {
+
+    }
+    else if (&src == &reset_but)
+    {
+
     }
 }
 

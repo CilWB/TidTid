@@ -2436,7 +2436,7 @@
           },
           {
             "TextId": "SingleUseId111",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 218,
               "Green": 19,
@@ -2450,9 +2450,9 @@
               "UseBuffer": true,
               "BufferSize": 3
             },
-            "Name": "sec_val",
-            "X": 246,
-            "Y": 82,
+            "Name": "min_val",
+            "X": 253,
+            "Y": 102,
             "Width": 93,
             "Height": 98,
             "Type": "TextArea",
@@ -2474,8 +2474,8 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "colon",
-            "X": 224,
-            "Y": 73,
+            "X": 231,
+            "Y": 72,
             "Width": 18,
             "Height": 98,
             "Type": "TextArea",
@@ -2487,7 +2487,7 @@
           },
           {
             "TextId": "SingleUseId114",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 218,
               "Green": 19,
@@ -2501,9 +2501,9 @@
               "UseBuffer": true,
               "BufferSize": 3
             },
-            "Name": "minutes_val",
-            "X": 129,
-            "Y": 82,
+            "Name": "sec_val",
+            "X": 136,
+            "Y": 102,
             "Width": 93,
             "Height": 98,
             "Type": "TextArea",
@@ -2515,12 +2515,12 @@
           },
           {
             "InitialStatePressed": false,
-            "Pressed": "down.png",
-            "Released": "up.png",
+            "Pressed": "downnnn.png",
+            "Released": "upp.png",
             "Alpha": 255,
             "Name": "up",
             "X": 186,
-            "Y": 35,
+            "Y": 213,
             "Width": 108,
             "Height": 38,
             "Type": "ToggleButton",
@@ -2531,12 +2531,12 @@
             "Moveable": false
           },
           {
-            "Pressed": "start1.png",
-            "Released": "start.png",
+            "Pressed": "stts.png",
+            "Released": "stst.png",
             "Alpha": 255,
             "Name": "start_but",
             "X": 186,
-            "Y": 217,
+            "Y": 31,
             "Width": 108,
             "Height": 38,
             "Type": "Button",
@@ -2737,6 +2737,38 @@
             "Clickable": false,
             "Fadeable": false,
             "Moveable": false
+          },
+          {
+            "Pressed": "stop1.png",
+            "Released": "stt.png",
+            "Alpha": 255,
+            "Name": "stop_but",
+            "X": 51,
+            "Y": 31,
+            "Width": 108,
+            "Height": 38,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "reset1.png",
+            "Released": "sttsst.png",
+            "Alpha": 255,
+            "Name": "reset_but",
+            "X": 321,
+            "Y": 31,
+            "Width": 108,
+            "Height": 38,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
           }
         ],
         "Interactions": [
@@ -2789,20 +2821,6 @@
             "Action": {
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "count_down",
-              "Type": "ActionGotoScreen"
-            }
-          },
-          {
-            "InteractionName": "click_start_but",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "start_but",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "North",
-              "ActionComponent": "count_up2",
               "Type": "ActionGotoScreen"
             }
           }
@@ -2833,446 +2851,8 @@
             "Moveable": false
           },
           {
-            "TextId": "SingleUseId116",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 218,
-              "Green": 19,
-              "Blue": 19
-            },
-            "Alpha": 255,
-            "AutoSize": false,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId117",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Name": "minutes_val",
-            "X": 129,
-            "Y": 82,
-            "Width": 93,
-            "Height": 98,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId118",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 218,
-              "Green": 19,
-              "Blue": 19
-            },
-            "Alpha": 255,
-            "AutoSize": true,
-            "LineSpacing": 0,
-            "Name": "colon",
-            "X": 224,
-            "Y": 73,
-            "Width": 18,
-            "Height": 98,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "TextId": "SingleUseId119",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 218,
-              "Green": 19,
-              "Blue": 19
-            },
-            "Alpha": 255,
-            "AutoSize": false,
-            "LineSpacing": 0,
-            "Wildcard1": {
-              "TextId": "SingleUseId120",
-              "UseBuffer": true,
-              "BufferSize": 3
-            },
-            "Name": "sec_val",
-            "X": 246,
-            "Y": 82,
-            "Width": 93,
-            "Height": 98,
-            "Type": "TextArea",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "stop1.png",
-            "Released": "stop.png",
-            "Alpha": 255,
-            "Name": "stop_but",
-            "X": 117,
-            "Y": 217,
-            "Width": 108,
-            "Height": 38,
-            "Type": "Button",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "InitialStatePressed": false,
-            "Pressed": "down.png",
-            "Released": "up.png",
-            "Alpha": 255,
-            "Name": "toggleButton1_1",
-            "X": 186,
-            "Y": 35,
-            "Width": 108,
-            "Height": 38,
-            "Type": "ToggleButton",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Alpha": 255,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "Width": 26,
-                "Height": 24,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Red": 76,
-                  "Green": 74,
-                  "Blue": 209
-                },
-                "ColorPressed": {
-                  "Red": 61,
-                  "Green": 72,
-                  "Blue": 186
-                },
-                "ColorBorderReleased": {
-                  "Red": 179,
-                  "Green": 174,
-                  "Blue": 252
-                },
-                "ColorBorderPressed": {
-                  "Red": 191,
-                  "Green": 187,
-                  "Blue": 255
-                }
-              }
-            ],
-            "Name": "flexButton1",
-            "X": 0,
-            "Y": 89,
-            "Width": 26,
-            "Height": 24,
-            "Type": "FlexButton",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Alpha": 255,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "Width": 26,
-                "Height": 24,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Red": 230,
-                  "Green": 58,
-                  "Blue": 27
-                },
-                "ColorPressed": {
-                  "Red": 230,
-                  "Green": 54,
-                  "Blue": 22
-                },
-                "ColorBorderReleased": {
-                  "Red": 255,
-                  "Green": 139,
-                  "Blue": 134
-                },
-                "ColorBorderPressed": {
-                  "Red": 255,
-                  "Green": 151,
-                  "Blue": 132
-                }
-              }
-            ],
-            "Name": "flexButton1_1",
-            "X": 0,
-            "Y": 248,
-            "Width": 26,
-            "Height": 24,
-            "Type": "FlexButton",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Alpha": 255,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "Width": 26,
-                "Height": 24,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Red": 237,
-                  "Green": 230,
-                  "Blue": 39
-                },
-                "ColorPressed": {
-                  "Red": 245,
-                  "Green": 229,
-                  "Blue": 57
-                },
-                "ColorBorderReleased": {
-                  "Red": 255,
-                  "Green": 251,
-                  "Blue": 204
-                },
-                "ColorBorderPressed": {
-                  "Red": 255,
-                  "Green": 244,
-                  "Blue": 176
-                }
-              }
-            ],
-            "Name": "flexButton1_2",
-            "X": 0,
-            "Y": 0,
-            "Width": 26,
-            "Height": 24,
-            "Type": "FlexButton",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Alpha": 255,
-            "ButtonTrigger": {
-              "Type": "ClickButtonTrigger"
-            },
-            "ButtonStyles": [
-              {
-                "Type": "BoxWithBorderButtonStyle",
-                "X": 0,
-                "Y": 0,
-                "Width": 26,
-                "Height": 24,
-                "LockToFlexButtonSize": true,
-                "BorderSize": 5,
-                "ColorReleased": {
-                  "Red": 67,
-                  "Green": 204,
-                  "Blue": 79
-                },
-                "ColorPressed": {
-                  "Red": 72,
-                  "Green": 217,
-                  "Blue": 53
-                },
-                "ColorBorderReleased": {
-                  "Red": 52,
-                  "Green": 252,
-                  "Blue": 110
-                },
-                "ColorBorderPressed": {
-                  "Red": 90,
-                  "Green": 214,
-                  "Blue": 81
-                }
-              }
-            ],
-            "Name": "flexButton1_3",
-            "X": 0,
-            "Y": 166,
-            "Width": 26,
-            "Height": 24,
-            "Type": "FlexButton",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
-            "Pressed": "reset1.png",
-            "Released": "reset.png",
-            "Alpha": 255,
-            "Name": "reset_but",
-            "X": 253,
-            "Y": 217,
-            "Width": 108,
-            "Height": 38,
-            "Type": "Button",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          }
-        ],
-        "Interactions": [
-          {
-            "InteractionName": "Interaction1",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "flexButton1_2",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "calendar",
-              "Type": "ActionGotoScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "flexButton1_1",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "alarm",
-              "Type": "ActionGotoScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction3",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "flexButton1",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "main",
-              "Type": "ActionGotoScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "flexButton1_3",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "count_up",
-              "Type": "ActionGotoScreen"
-            }
-          },
-          {
-            "InteractionName": "click_reset_but",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "reset_but",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "FunctionName": "stopUp",
-              "Type": "ActionCustom"
-            }
-          },
-          {
-            "InteractionName": "click_stop_but",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "stop_but",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "FunctionName": "resetUp",
-              "Type": "ActionCustom"
-            }
-          },
-          {
-            "InteractionName": "toggleModeTimer",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "toggleButton1_1",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionSlide",
-              "ScreenTransitionDirection": "North",
-              "ActionComponent": "count_down",
-              "Type": "ActionGotoScreen"
-            }
-          }
-        ],
-        "Name": "count_up2",
-        "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
-      },
-      {
-        "Components": [
-          {
-            "Color": {
-              "Red": 29,
-              "Green": 29,
-              "Blue": 29
-            },
-            "Alpha": 255,
-            "Name": "box1",
-            "X": 0,
-            "Y": 0,
-            "Width": 480,
-            "Height": 272,
-            "Type": "Box",
-            "Visible": true,
-            "Draggable": false,
-            "Clickable": false,
-            "Fadeable": false,
-            "Moveable": false
-          },
-          {
             "TextId": "SingleUseId121",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 218,
               "Green": 19,
@@ -3288,7 +2868,7 @@
             },
             "Name": "minutes_val",
             "X": 134,
-            "Y": 80,
+            "Y": 101,
             "Width": 93,
             "Height": 98,
             "Type": "TextArea",
@@ -3311,7 +2891,7 @@
             "LineSpacing": 0,
             "Name": "colon",
             "X": 229,
-            "Y": 71,
+            "Y": 66,
             "Width": 18,
             "Height": 98,
             "Type": "TextArea",
@@ -3323,7 +2903,7 @@
           },
           {
             "TextId": "SingleUseId124",
-            "TextRotation": "0",
+            "TextRotation": "180",
             "Color": {
               "Red": 218,
               "Green": 19,
@@ -3339,7 +2919,7 @@
             },
             "Name": "sec_val",
             "X": 251,
-            "Y": 80,
+            "Y": 101,
             "Width": 93,
             "Height": 98,
             "Type": "TextArea",
@@ -3351,12 +2931,12 @@
           },
           {
             "InitialStatePressed": false,
-            "Pressed": "up.png",
-            "Released": "down.png",
+            "Pressed": "upp.png",
+            "Released": "downnnn.png",
             "Alpha": 255,
             "Name": "down",
             "X": 186,
-            "Y": 12,
+            "Y": 218,
             "Width": 108,
             "Height": 38,
             "Type": "ToggleButton",
@@ -3367,12 +2947,12 @@
             "Moveable": false
           },
           {
-            "Pressed": "reset1.png",
-            "Released": "reset.png",
+            "Pressed": "stts.png",
+            "Released": "stst.png",
             "Alpha": 255,
             "Name": "reset_but",
             "X": 186,
-            "Y": 225,
+            "Y": 10,
             "Width": 108,
             "Height": 38,
             "Type": "Button",
@@ -3578,9 +3158,9 @@
             "Pressed": "down2.png",
             "Released": "down1.png",
             "Alpha": 255,
-            "Name": "up_h",
+            "Name": "up_m",
             "X": 282,
-            "Y": 189,
+            "Y": 174,
             "Width": 31,
             "Height": 27,
             "Type": "Button",
@@ -3594,9 +3174,9 @@
             "Pressed": "down2.png",
             "Released": "down1.png",
             "Alpha": 255,
-            "Name": "down_h",
+            "Name": "up_sec",
             "X": 165,
-            "Y": 189,
+            "Y": 174,
             "Width": 31,
             "Height": 27,
             "Type": "Button",
@@ -3610,9 +3190,9 @@
             "Pressed": "up2.png",
             "Released": "up1.png",
             "Alpha": 255,
-            "Name": "up_min",
+            "Name": "down_m",
             "X": 282,
-            "Y": 68,
+            "Y": 70,
             "Width": 31,
             "Height": 27,
             "Type": "Button",
@@ -3626,11 +3206,43 @@
             "Pressed": "up2.png",
             "Released": "up1.png",
             "Alpha": 255,
-            "Name": "down_min",
+            "Name": "down_sec",
             "X": 165,
-            "Y": 68,
+            "Y": 70,
             "Width": 31,
             "Height": 27,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "stop1.png",
+            "Released": "stt.png",
+            "Alpha": 255,
+            "Name": "stop_but",
+            "X": 51,
+            "Y": 10,
+            "Width": 108,
+            "Height": 38,
+            "Type": "Button",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "reset1.png",
+            "Released": "sttsst.png",
+            "Alpha": 255,
+            "Name": "reset_but_1",
+            "X": 321,
+            "Y": 10,
+            "Width": 108,
+            "Height": 38,
             "Type": "Button",
             "Visible": true,
             "Draggable": false,
@@ -3654,19 +3266,6 @@
             }
           },
           {
-            "InteractionName": "Interaction2",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "flexButton1_2",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "count_up2",
-              "Type": "ActionGotoScreen"
-            }
-          },
-          {
             "InteractionName": "Interaction3",
             "HasCompletedTrigger": false,
             "Trigger": {
@@ -3676,19 +3275,6 @@
             "Action": {
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "main",
-              "Type": "ActionGotoScreen"
-            }
-          },
-          {
-            "InteractionName": "Interaction4",
-            "HasCompletedTrigger": false,
-            "Trigger": {
-              "TriggerComponent": "flexButton1_3",
-              "Type": "TriggerClicked"
-            },
-            "Action": {
-              "ScreenTransitionType": "ScreenTransitionNone",
-              "ActionComponent": "count_up2",
               "Type": "ActionGotoScreen"
             }
           }
@@ -4707,26 +4293,6 @@
         "IsResource": false
       },
       {
-        "TextEntryId": "SingleUseId116",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId117",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId118",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId119",
-        "IsResource": false
-      },
-      {
-        "TextEntryId": "SingleUseId120",
-        "IsResource": false
-      },
-      {
         "TextEntryId": "SingleUseId121",
         "IsResource": false
       },
@@ -4825,7 +4391,7 @@
       "Height": 272
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "main",
+    "StartupScreenName": "count_up",
     "SelectedStartupLanguage": "GB",
     "Skin": "Blue",
     "TouchGfxPath": "../Middlewares/ST/TouchGFX/touchgfx/",

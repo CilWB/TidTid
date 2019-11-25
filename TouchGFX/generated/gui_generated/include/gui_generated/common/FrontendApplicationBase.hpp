@@ -35,16 +35,8 @@ public:
     void gotocount_upScreenNoTransition();
 
 
-    // count_up2
-    void gotocount_up2ScreenSlideTransitionNorth();
-
-    void gotocount_up2ScreenNoTransition();
-
-
     // count_down
     void gotocount_downScreenNoTransition();
-
-    void gotocount_downScreenSlideTransitionNorth();
 
 
     // alarm
@@ -75,16 +67,8 @@ protected:
     void gotocount_upScreenNoTransitionImpl();
 
 
-    // count_up2
-    void gotocount_up2ScreenSlideTransitionNorthImpl();
-
-    void gotocount_up2ScreenNoTransitionImpl();
-
-
     // count_down
     void gotocount_downScreenNoTransitionImpl();
-
-    void gotocount_downScreenSlideTransitionNorthImpl();
 
 
     // alarm

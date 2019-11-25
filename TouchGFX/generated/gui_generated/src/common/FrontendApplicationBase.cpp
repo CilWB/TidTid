@@ -17,8 +17,6 @@
 #include <gui/calendar_screen/calendarPresenter.hpp>
 #include <gui/count_up_screen/count_upView.hpp>
 #include <gui/count_up_screen/count_upPresenter.hpp>
-#include <gui/count_up2_screen/count_up2View.hpp>
-#include <gui/count_up2_screen/count_up2Presenter.hpp>
 #include <gui/count_down_screen/count_downView.hpp>
 #include <gui/count_down_screen/count_downPresenter.hpp>
 #include <gui/alarm_screen/alarmView.hpp>
@@ -106,31 +104,6 @@ void FrontendApplicationBase::gotocount_upScreenNoTransitionImpl()
     makeTransition<count_upView, count_upPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
-// count_up2
-
-void FrontendApplicationBase::gotocount_up2ScreenSlideTransitionNorth()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotocount_up2ScreenSlideTransitionNorthImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotocount_up2ScreenSlideTransitionNorthImpl()
-{
-    makeTransition<count_up2View, count_up2Presenter, touchgfx::SlideTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-
-void FrontendApplicationBase::gotocount_up2ScreenNoTransition()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotocount_up2ScreenNoTransitionImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotocount_up2ScreenNoTransitionImpl()
-{
-    makeTransition<count_up2View, count_up2Presenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
 // count_down
 
 void FrontendApplicationBase::gotocount_downScreenNoTransition()
@@ -142,18 +115,6 @@ void FrontendApplicationBase::gotocount_downScreenNoTransition()
 void FrontendApplicationBase::gotocount_downScreenNoTransitionImpl()
 {
     makeTransition<count_downView, count_downPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
-}
-
-
-void FrontendApplicationBase::gotocount_downScreenSlideTransitionNorth()
-{
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotocount_downScreenSlideTransitionNorthImpl);
-    pendingScreenTransitionCallback = &transitionCallback;
-}
-
-void FrontendApplicationBase::gotocount_downScreenSlideTransitionNorthImpl()
-{
-    makeTransition<count_downView, count_downPresenter, touchgfx::SlideTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 // alarm

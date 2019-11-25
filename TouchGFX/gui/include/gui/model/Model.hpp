@@ -38,6 +38,7 @@ public:
 		void setCLK();
 		void updateTime();
 		void updateCalendar();
+		void updateCountUp();
 		
 		int getC();
 		int getSec_();
@@ -49,13 +50,14 @@ public:
 		int getYear_();
 		int getTemp_();
 		int getHumid_();
+		int getTickk_();
 protected:
     /**
      * Pointer to the currently active presenter.
      */
     ModelListener* modelListener;
 		int c;
-
+		int tickk;
 		static int sec_;
 		static int min_;
 		static int hour_;

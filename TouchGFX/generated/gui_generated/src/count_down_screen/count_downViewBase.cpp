@@ -13,30 +13,32 @@ count_downViewBase::count_downViewBase() :
     box1.setPosition(0, 0, 480, 272);
     box1.setColor(touchgfx::Color::getColorFrom24BitRGB(29, 29, 29));
 
-    minutes_val.setPosition(134, 80, 93, 98);
+    minutes_val.setPosition(134, 101, 93, 98);
     minutes_val.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
     minutes_val.setLinespacing(0);
+    minutes_val.setRotation(TEXT_ROTATE_180);
     Unicode::snprintf(minutes_valBuffer, MINUTES_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID122).getText());
     minutes_val.setWildcard(minutes_valBuffer);
     minutes_val.setTypedText(TypedText(T_SINGLEUSEID121));
 
-    colon.setXY(229, 71);
+    colon.setXY(229, 66);
     colon.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
     colon.setLinespacing(0);
     colon.setTypedText(TypedText(T_SINGLEUSEID123));
 
-    sec_val.setPosition(251, 80, 93, 98);
+    sec_val.setPosition(251, 101, 93, 98);
     sec_val.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
     sec_val.setLinespacing(0);
+    sec_val.setRotation(TEXT_ROTATE_180);
     Unicode::snprintf(sec_valBuffer, SEC_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID125).getText());
     sec_val.setWildcard(sec_valBuffer);
     sec_val.setTypedText(TypedText(T_SINGLEUSEID124));
 
-    down.setXY(186, 12);
-    down.setBitmaps(Bitmap(BITMAP_DOWN_ID), Bitmap(BITMAP_UP_ID));
+    down.setXY(186, 218);
+    down.setBitmaps(Bitmap(BITMAP_DOWNNNN_ID), Bitmap(BITMAP_UPP_ID));
 
-    reset_but.setXY(186, 225);
-    reset_but.setBitmaps(Bitmap(BITMAP_RESET_ID), Bitmap(BITMAP_RESET1_ID));
+    reset_but.setXY(186, 10);
+    reset_but.setBitmaps(Bitmap(BITMAP_STST_ID), Bitmap(BITMAP_STTS_ID));
 
     flexButton1.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1.setBorderSize(5);
@@ -54,25 +56,29 @@ count_downViewBase::count_downViewBase() :
     flexButton1_2.setBorderSize(5);
     flexButton1_2.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(237, 230, 39), touchgfx::Color::getColorFrom24BitRGB(245, 229, 57), touchgfx::Color::getColorFrom24BitRGB(255, 251, 204), touchgfx::Color::getColorFrom24BitRGB(255, 244, 176));
     flexButton1_2.setPosition(0, 248, 26, 24);
-    flexButton1_2.setAction(flexButtonCallback);
 
     flexButton1_3.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1_3.setBorderSize(5);
     flexButton1_3.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(67, 204, 79), touchgfx::Color::getColorFrom24BitRGB(72, 217, 53), touchgfx::Color::getColorFrom24BitRGB(52, 252, 110), touchgfx::Color::getColorFrom24BitRGB(90, 214, 81));
     flexButton1_3.setPosition(0, 166, 26, 24);
-    flexButton1_3.setAction(flexButtonCallback);
 
-    up_h.setXY(282, 189);
-    up_h.setBitmaps(Bitmap(BITMAP_DOWN1_ID), Bitmap(BITMAP_DOWN2_ID));
+    up_m.setXY(282, 174);
+    up_m.setBitmaps(Bitmap(BITMAP_DOWN1_ID), Bitmap(BITMAP_DOWN2_ID));
 
-    down_h.setXY(165, 189);
-    down_h.setBitmaps(Bitmap(BITMAP_DOWN1_ID), Bitmap(BITMAP_DOWN2_ID));
+    up_sec.setXY(165, 174);
+    up_sec.setBitmaps(Bitmap(BITMAP_DOWN1_ID), Bitmap(BITMAP_DOWN2_ID));
 
-    up_min.setXY(282, 68);
-    up_min.setBitmaps(Bitmap(BITMAP_UP1_ID), Bitmap(BITMAP_UP2_ID));
+    down_m.setXY(282, 70);
+    down_m.setBitmaps(Bitmap(BITMAP_UP1_ID), Bitmap(BITMAP_UP2_ID));
 
-    down_min.setXY(165, 68);
-    down_min.setBitmaps(Bitmap(BITMAP_UP1_ID), Bitmap(BITMAP_UP2_ID));
+    down_sec.setXY(165, 70);
+    down_sec.setBitmaps(Bitmap(BITMAP_UP1_ID), Bitmap(BITMAP_UP2_ID));
+
+    stop_but.setXY(51, 10);
+    stop_but.setBitmaps(Bitmap(BITMAP_STT_ID), Bitmap(BITMAP_STOP1_ID));
+
+    reset_but_1.setXY(321, 10);
+    reset_but_1.setBitmaps(Bitmap(BITMAP_STTSST_ID), Bitmap(BITMAP_RESET1_ID));
 
     add(box1);
     add(minutes_val);
@@ -84,10 +90,12 @@ count_downViewBase::count_downViewBase() :
     add(flexButton1_1);
     add(flexButton1_2);
     add(flexButton1_3);
-    add(up_h);
-    add(down_h);
-    add(up_min);
-    add(down_min);
+    add(up_m);
+    add(up_sec);
+    add(down_m);
+    add(down_sec);
+    add(stop_but);
+    add(reset_but_1);
 }
 
 void count_downViewBase::setupScreen()
@@ -105,19 +113,27 @@ void count_downViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
     {
 
     }
-    else if (&src == &up_h)
+    else if (&src == &up_m)
     {
 
     }
-    else if (&src == &down_h)
+    else if (&src == &up_sec)
     {
 
     }
-    else if (&src == &up_min)
+    else if (&src == &down_m)
     {
 
     }
-    else if (&src == &down_min)
+    else if (&src == &down_sec)
+    {
+
+    }
+    else if (&src == &stop_but)
+    {
+
+    }
+    else if (&src == &reset_but_1)
     {
 
     }
@@ -141,16 +157,10 @@ void count_downViewBase::flexButtonCallbackHandler(const touchgfx::AbstractButto
     }
     else if (&src == &flexButton1_2)
     {
-        //Interaction2
-        //When flexButton1_2 clicked change screen to count_up2
-        //Go to count_up2 with no screen transition
-        application().gotocount_up2ScreenNoTransition();
+
     }
     else if (&src == &flexButton1_3)
     {
-        //Interaction4
-        //When flexButton1_3 clicked change screen to count_up2
-        //Go to count_up2 with no screen transition
-        application().gotocount_up2ScreenNoTransition();
+
     }
 }

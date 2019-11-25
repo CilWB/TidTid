@@ -125,9 +125,6 @@ build/MINGW32_NT-6.2/simulator/main.o: simulator/main.cpp \
  generated/gui_generated/include/gui_generated/count_up_screen/count_upViewBase.hpp \
  gui/include/gui/count_up_screen/count_upPresenter.hpp \
  ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ToggleButton.hpp \
- gui/include/gui/count_up2_screen/count_up2View.hpp \
- generated/gui_generated/include/gui_generated/count_up2_screen/count_up2ViewBase.hpp \
- gui/include/gui/count_up2_screen/count_up2Presenter.hpp \
  gui/include/gui/count_down_screen/count_downView.hpp \
  generated/gui_generated/include/gui_generated/count_down_screen/count_downViewBase.hpp \
  gui/include/gui/count_down_screen/count_downPresenter.hpp \
@@ -394,12 +391,6 @@ generated/gui_generated/include/gui_generated/count_up_screen/count_upViewBase.h
 gui/include/gui/count_up_screen/count_upPresenter.hpp:
 
 ../Middlewares/ST/TouchGFX/touchgfx///framework/include/touchgfx/widgets/ToggleButton.hpp:
-
-gui/include/gui/count_up2_screen/count_up2View.hpp:
-
-generated/gui_generated/include/gui_generated/count_up2_screen/count_up2ViewBase.hpp:
-
-gui/include/gui/count_up2_screen/count_up2Presenter.hpp:
 
 gui/include/gui/count_down_screen/count_downView.hpp:
 

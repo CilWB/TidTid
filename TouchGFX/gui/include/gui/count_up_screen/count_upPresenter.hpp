@@ -26,6 +26,8 @@ public:
     virtual void deactivate();
 
     virtual ~count_upPresenter() {};
+		
+		void updateCountUp();
 
 private:
     count_upPresenter();

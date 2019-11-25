@@ -122,9 +122,6 @@ tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/count_up_screen/count
 tidtid02\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/count_up_screen/count_upViewBase.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/count_up_screen/count_upPresenter.hpp
 tidtid02\boardconfiguration.o: ../middlewares/st/touchgfx/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/count_up2_screen/count_up2View.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/count_up2_screen/count_up2ViewBase.hpp
-tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/count_up2_screen/count_up2Presenter.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/count_down_screen/count_downView.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/generated/gui_generated/include/gui_generated/count_down_screen/count_downViewBase.hpp
 tidtid02\boardconfiguration.o: ../TouchGFX/gui/include/gui/count_down_screen/count_downPresenter.hpp

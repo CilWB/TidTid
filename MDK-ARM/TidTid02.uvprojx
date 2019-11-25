@@ -1,10 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_projx.xsd">
-
   <SchemaVersion>2.1</SchemaVersion>
-
   <Header>### uVision Project, (C) Keil Software</Header>
-
   <Targets>
     <Target>
       <TargetName>TidTid02</TargetName>
@@ -828,16 +825,6 @@
               <FilePath>../touchgfx/gui/src/count_down_screen/count_downview.cpp</FilePath>
             </File>
             <File>
-              <FileName>count_up2Presenter.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/count_up2_screen/count_up2presenter.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>count_up2View.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/gui/src/count_up2_screen/count_up2view.cpp</FilePath>
-            </File>
-            <File>
               <FileName>count_upPresenter.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/gui/src/count_up_screen/count_uppresenter.cpp</FilePath>
@@ -968,11 +955,6 @@
               <FilePath>../touchgfx/generated/gui_generated/src/count_down_screen/count_downviewbase.cpp</FilePath>
             </File>
             <File>
-              <FileName>count_up2ViewBase.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../touchgfx/generated/gui_generated/src/count_up2_screen/count_up2viewbase.cpp</FilePath>
-            </File>
-            <File>
               <FileName>count_upViewBase.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/gui_generated/src/count_up_screen/count_upviewbase.cpp</FilePath>
@@ -1001,6 +983,16 @@
               <FileName>down_r2.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/down_r2.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>downn.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/downn.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>downnnn.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/downnnn.cpp</FilePath>
             </File>
             <File>
               <FileName>Font_Digitalt_19_4bpp.cpp</FileName>
@@ -1183,6 +1175,31 @@
               <FilePath>../touchgfx/generated/images/src/stop1.cpp</FilePath>
             </File>
             <File>
+              <FileName>stst.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/stst.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>stt.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/stt.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>stts.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/stts.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>sttsst.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/sttsst.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>sttt.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/sttt.cpp</FilePath>
+            </File>
+            <File>
               <FileName>Table_Digitalt_19_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/fonts/src/table_digitalt_19_4bpp.cpp</FilePath>
@@ -1262,6 +1279,16 @@
               <FileType>8</FileType>
               <FilePath>../touchgfx/generated/images/src/up_r2.cpp</FilePath>
             </File>
+            <File>
+              <FileName>upp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/upp.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>uppp.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../touchgfx/generated/images/src/uppp.cpp</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1295,18 +1322,16 @@
       </Groups>
     </Target>
   </Targets>
-
   <RTE>
-    <apis/>
+    <apis></apis>
     <components>
       <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="4.3.0" condition="CMSIS Core">
-        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.5.0"/>
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.5.0"></package>
         <targetInfos>
-          <targetInfo name="TidTid02"/>
+          <targetInfo name="TidTid02"></targetInfo>
         </targetInfos>
       </component>
     </components>
-    <files/>
+    <files></files>
   </RTE>
-
 </Project>

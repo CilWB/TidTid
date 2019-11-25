@@ -194,3 +194,17 @@ void calendarView::genCalendar(int day, int date , int month, int year){
 		d35.invalidate();
 		
 }
+
+void calendarView::move(int page){
+
+	//HAL::getInstance()->setDisplayOrientation(orientation); //set new orientation
+
+  if(page==0) static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreenNoTransition();
+  //else if(page==1) 
+	//		static_cast<FrontendApplication*>(Application::getInstance())->gotocalendarScreenNoTransition();
+  else if(page==2) 
+		static_cast<FrontendApplication*>(Application::getInstance())->gotocount_upScreenNoTransition();
+  else if(page==3) 
+		static_cast<FrontendApplication*>(Application::getInstance())->gotoalarmScreenNoTransition();
+	
+}

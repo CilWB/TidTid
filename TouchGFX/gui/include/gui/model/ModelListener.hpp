@@ -31,6 +31,7 @@ public:
 		virtual void checkClick(){}
 		virtual void updateTime(){}
 		virtual void updateCalendar(){}
+		virtual void updateCountUp(){}
 			
 protected:
     Model* model;

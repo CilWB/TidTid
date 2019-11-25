@@ -12,7 +12,7 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
 		void updateTimee(int sec,int min,int hour,int day,int date,int month,int year,int tmep,int humid);
-		void test();
+		void move(int page);
 protected:
 };
 

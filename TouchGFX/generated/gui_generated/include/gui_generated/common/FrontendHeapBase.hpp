@@ -20,14 +20,6 @@
 
 
 
-#include <touchgfx/transitions/SlideTransition.hpp>
-
-
-
-
-#include <touchgfx/transitions/SlideTransition.hpp>
-
-
 
 
 
@@ -47,8 +39,6 @@
 #include <gui/calendar_screen/calendarPresenter.hpp>
 #include <gui/count_up_screen/count_upView.hpp>
 #include <gui/count_up_screen/count_upPresenter.hpp>
-#include <gui/count_up2_screen/count_up2View.hpp>
-#include <gui/count_up2_screen/count_up2Presenter.hpp>
 #include <gui/count_down_screen/count_downView.hpp>
 #include <gui/count_down_screen/count_downPresenter.hpp>
 #include <gui/alarm_screen/alarmView.hpp>
@@ -82,11 +72,10 @@ public:
             meta::TypeList< mainView,
             meta::TypeList< calendarView,
             meta::TypeList< count_upView,
-            meta::TypeList< count_up2View,
             meta::TypeList< count_downView,
             meta::TypeList< alarmView,
             meta::TypeList< alarmmmmmView,
-            meta::Nil > > > > > > > >
+            meta::Nil > > > > > > >
             > GeneratedViewTypes;
 
     /**
@@ -103,11 +92,10 @@ public:
             meta::TypeList< mainPresenter,
             meta::TypeList< calendarPresenter,
             meta::TypeList< count_upPresenter,
-            meta::TypeList< count_up2Presenter,
             meta::TypeList< count_downPresenter,
             meta::TypeList< alarmPresenter,
             meta::TypeList< alarmmmmmPresenter,
-            meta::Nil > > > > > > > >
+            meta::Nil > > > > > > >
             > GeneratedPresenterTypes;
 
     /**
@@ -122,8 +110,7 @@ public:
     typedef meta::TypeList< NoTransition,
             meta::TypeList< CoverTransition<WEST>,
             meta::TypeList< SlideTransition<EAST>,
-            meta::TypeList< SlideTransition<NORTH>,
-            meta::Nil > > >
+            meta::Nil > >
             > GeneratedTransitionTypes;
 
     /**
@@ -133,7 +120,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotomainScreenNoTransition();
+        app.gotocount_upScreenNoTransition();
     }
 protected:
     FrontendHeapBase(AbstractPartition& presenters, AbstractPartition& views, AbstractPartition& transitions, FrontendApplication& app)

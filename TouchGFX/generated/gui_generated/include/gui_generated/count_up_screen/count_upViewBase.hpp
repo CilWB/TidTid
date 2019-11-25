@@ -31,23 +31,25 @@ protected:
      * Member Declarations
      */
     touchgfx::Box box1;
-    touchgfx::TextAreaWithOneWildcard sec_val;
+    touchgfx::TextAreaWithOneWildcard min_val;
     touchgfx::TextArea colon;
-    touchgfx::TextAreaWithOneWildcard minutes_val;
+    touchgfx::TextAreaWithOneWildcard sec_val;
     touchgfx::ToggleButton up;
     touchgfx::Button start_but;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_1;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_2;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_3;
+    touchgfx::Button stop_but;
+    touchgfx::Button reset_but;
 
     /*
      * Wildcard Buffers
      */
+    static const uint16_t MIN_VAL_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar min_valBuffer[MIN_VAL_SIZE];
     static const uint16_t SEC_VAL_SIZE = 3;
     touchgfx::Unicode::UnicodeChar sec_valBuffer[SEC_VAL_SIZE];
-    static const uint16_t MINUTES_VAL_SIZE = 3;
-    touchgfx::Unicode::UnicodeChar minutes_valBuffer[MINUTES_VAL_SIZE];
 
 private:
 

@@ -4,13 +4,14 @@
 extern int buttonCount;
 extern float t,h;
 extern int sec,min,hour,day,date,month,year,year4;
-Model::Model() : modelListener(0),c(0.0)
+Model::Model() : modelListener(0),c(0.0),tickk(0)
 {
 	
 }
 
 void Model::tick()
 {
+	tickk++;
 	// clicking
 	modelListener->checkClick();
 	//modelListener->setCLK();
@@ -20,13 +21,20 @@ void Model::tick()
 	
 	// calendar screen
 	modelListener->updateCalendar();
+	
+	// count_up
+	modelListener->updateCountUp();
 }
 
 int Model::getC()
 {
 	//c = buttonCount;
 	//c = (int)t/1;
- 	return 777;
+ 	return buttonCount;
+}
+
+int Model::getTickk_(){
+	return tickk;
 }
 
 int Model::getSec_(){

@@ -40,10 +40,12 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_1;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_2;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_3;
-    touchgfx::Button up_h;
-    touchgfx::Button down_h;
-    touchgfx::Button up_min;
-    touchgfx::Button down_min;
+    touchgfx::Button up_m;
+    touchgfx::Button up_sec;
+    touchgfx::Button down_m;
+    touchgfx::Button down_sec;
+    touchgfx::Button stop_but;
+    touchgfx::Button reset_but_1;
 
     /*
      * Wildcard Buffers

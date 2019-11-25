@@ -11,6 +11,7 @@ public:
     virtual ~count_upView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+		void countUP(int tick);
 protected:
 };
 

@@ -32,6 +32,6 @@ void mainPresenter::updateTime()
 	model->getTemp_(),
 	model->getHumid_()	
 	);
-	//view.test();
+	view.move(model->getC()%4);
 }
 

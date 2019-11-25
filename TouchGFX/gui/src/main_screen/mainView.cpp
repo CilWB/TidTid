@@ -68,8 +68,17 @@ void mainView::updateTimee(int sec,int min,int hour,int day,int date,int month,i
 		
 
 
-void mainView::test(){
+void mainView::move(int page){
 
 	//HAL::getInstance()->setDisplayOrientation(orientation); //set new orientation
-  static_cast<FrontendApplication*>(Application::getInstance())->gotocalendarScreenNoTransition(); //switch screen (to the same screen we are currently displaying).
+
+  //if(page==0) static_cast<FrontendApplication*>(Application::getInstance())->gotomainScreenNoTransition();
+  //else 
+		if(page==1) 
+			static_cast<FrontendApplication*>(Application::getInstance())->gotocalendarScreenNoTransition();
+  else if(page==2) 
+		static_cast<FrontendApplication*>(Application::getInstance())->gotocount_upScreenNoTransition();
+  else if(page==3) 
+		static_cast<FrontendApplication*>(Application::getInstance())->gotoalarmScreenNoTransition();
+	
 }
