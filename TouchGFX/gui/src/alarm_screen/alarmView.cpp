@@ -1,5 +1,9 @@
 #include <gui/alarm_screen/alarmView.hpp>
 
+
+extern int wakee;
+
+
 alarmView::alarmView() : show_hr(8),show_min(30),alaramHour(8),alaramMin(30)
 {
 
@@ -16,8 +20,14 @@ void alarmView::tearDownScreen()
 }
 
 
-void alarmView::setSaveAlaram(){
+void alarmView::setSaveAlaram(int h , int m){
 
+		
+		if(h == alaramHour && m ==alaramMin ){
+			wakee = 1;
+		}
+		else 
+			wakee = 0;
 	
 		Unicode::snprintf(hour_valBuffer,3,"%02d",show_min);
 		Unicode::snprintf(minutes_valBuffer,3,"%02d",show_hr);

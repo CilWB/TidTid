@@ -5,8 +5,9 @@ extern int buttonCount;
 extern float t,h;
 extern int sec,min,hour,day,date,month,year,year4;
 extern unsigned int count_c;
-
-//extern int alaramHour,alaramMin ;
+extern int wakee;
+extern int alaramHour,alaramMin ;
+extern int modee;
 
 Model::Model() : modelListener(0),c(0.0),tickk(0)
 {
@@ -32,17 +33,25 @@ void Model::tick()
 	// set alaram
 	modelListener->updateAlaram();
 	
-	//if(alaramHour == getMin_() && getMin_() == alaramMin ){
+	//if(alaramHour == alaramMin && getHour_() ==  getMin_()){
 	//	year = 2000;
 	//}
 
+	
 }
+
+void Model::checlAlarm(){
+	//if(alaramHour == alaramMin && getHour_() ==  getMin_()){
+	//	year = 2000;
+	//	wakee = 1;
+	//}
+}	
 
 int Model::getC()
 {
 	//c = buttonCount;
 	//c = (int)t/1;
- 	return buttonCount;
+ 	return modee;//buttonCount;
 }
 
 int Model::getTickk_(){

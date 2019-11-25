@@ -45,18 +45,21 @@ alarmViewBase::alarmViewBase() :
     flexButton1.setBorderSize(5);
     flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(76, 74, 209), touchgfx::Color::getColorFrom24BitRGB(61, 72, 186), touchgfx::Color::getColorFrom24BitRGB(179, 174, 252), touchgfx::Color::getColorFrom24BitRGB(191, 187, 255));
     flexButton1.setPosition(454, 125, 26, 24);
+    flexButton1.setVisible(false);
     flexButton1.setAction(flexButtonCallback);
 
     flexButton1_1.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1_1.setBorderSize(5);
     flexButton1_1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(230, 58, 27), touchgfx::Color::getColorFrom24BitRGB(230, 54, 22), touchgfx::Color::getColorFrom24BitRGB(255, 139, 134), touchgfx::Color::getColorFrom24BitRGB(255, 151, 132));
     flexButton1_1.setPosition(454, 246, 26, 24);
+    flexButton1_1.setVisible(false);
     flexButton1_1.setAction(flexButtonCallback);
 
     flexButton1_2.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1_2.setBorderSize(5);
     flexButton1_2.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(237, 230, 39), touchgfx::Color::getColorFrom24BitRGB(245, 229, 57), touchgfx::Color::getColorFrom24BitRGB(255, 251, 204), touchgfx::Color::getColorFrom24BitRGB(255, 244, 176));
     flexButton1_2.setPosition(454, 0, 26, 24);
+    flexButton1_2.setVisible(false);
     flexButton1_2.setAction(flexButtonCallback);
 
     up_h.setXY(176, 182);

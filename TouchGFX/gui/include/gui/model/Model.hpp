@@ -41,6 +41,8 @@ public:
 		void updateCountUp();
 		void updateAlaram();
 		
+		void checlAlarm();
+		
 		int getC();
 		int getSec_();
 		int getMin_();
@@ -52,6 +54,8 @@ public:
 		int getTemp_();
 		int getHumid_();
 		int getTickk_();
+		
+		
 protected:
     /**
      * Pointer to the currently active presenter.

@@ -45,24 +45,28 @@ count_upViewBase::count_upViewBase() :
     flexButton1.setBorderSize(5);
     flexButton1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(76, 74, 209), touchgfx::Color::getColorFrom24BitRGB(61, 72, 186), touchgfx::Color::getColorFrom24BitRGB(179, 174, 252), touchgfx::Color::getColorFrom24BitRGB(191, 187, 255));
     flexButton1.setPosition(0, 80, 26, 24);
+    flexButton1.setVisible(false);
     flexButton1.setAction(flexButtonCallback);
 
     flexButton1_1.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1_1.setBorderSize(5);
     flexButton1_1.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(230, 58, 27), touchgfx::Color::getColorFrom24BitRGB(230, 54, 22), touchgfx::Color::getColorFrom24BitRGB(255, 139, 134), touchgfx::Color::getColorFrom24BitRGB(255, 151, 132));
     flexButton1_1.setPosition(0, 0, 26, 24);
+    flexButton1_1.setVisible(false);
     flexButton1_1.setAction(flexButtonCallback);
 
     flexButton1_2.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1_2.setBorderSize(5);
     flexButton1_2.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(237, 230, 39), touchgfx::Color::getColorFrom24BitRGB(245, 229, 57), touchgfx::Color::getColorFrom24BitRGB(255, 251, 204), touchgfx::Color::getColorFrom24BitRGB(255, 244, 176));
     flexButton1_2.setPosition(0, 243, 26, 24);
+    flexButton1_2.setVisible(false);
     flexButton1_2.setAction(flexButtonCallback);
 
     flexButton1_3.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1_3.setBorderSize(5);
     flexButton1_3.setBoxWithBorderColors(touchgfx::Color::getColorFrom24BitRGB(67, 204, 79), touchgfx::Color::getColorFrom24BitRGB(72, 217, 53), touchgfx::Color::getColorFrom24BitRGB(52, 252, 110), touchgfx::Color::getColorFrom24BitRGB(90, 214, 81));
     flexButton1_3.setPosition(0, 154, 26, 24);
+    flexButton1_3.setVisible(false);
     flexButton1_3.setAction(flexButtonCallback);
 
     stop_but.setXY(51, 31);

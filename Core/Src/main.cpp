@@ -139,8 +139,10 @@ uint16_t CRC16_2(uint8_t *,uint8_t );
 uint8_t ch[50];
 uint8_t dayOfWeek(int thn, int bln, int tgl);
 unsigned int count_c;
-int mode = 0;
+int modee = 0;
 int buttonCount=0;
+
+int wakee =  0;
 
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
@@ -152,7 +154,7 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart){
 			h = (ch[2]-'0')*10 + (ch[3]-'0');
 		}
 		if(ch[4]>='0'&&ch[4]<='3'){
-			mode = ch[4]-'0';
+			modee = ch[4]-'0';
 		}
 		
 		HAL_UART_Receive_IT(&huart6,ch,5);
@@ -1524,9 +1526,19 @@ void StartBlink02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-		HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
-		osDelay(1000);
-  }
+		if(wakee == 1){
+			HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
+			//HAL_GPIO_TogglePin(GPIOF,GPIO_PIN_8);
+			HAL_GPIO_WritePin(GPIOF,GPIO_PIN_8,GPIO_PIN_SET);
+			osDelay(1000);
+		}
+		else{
+		
+			HAL_GPIO_WritePin(GPIOF,GPIO_PIN_8,GPIO_PIN_RESET);
+		}
+			osDelay(1);
+		
+	}
   /* USER CODE END StartBlink02 */
 }
 

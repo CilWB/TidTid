@@ -18,6 +18,6 @@ void alarmPresenter::deactivate()
 
 
 void alarmPresenter::updateAlaram(){
-	view.setSaveAlaram();
+	view.setSaveAlaram(model->getHour_() , model->getMin_());
 	view.move(model->getC()%4);
 }
