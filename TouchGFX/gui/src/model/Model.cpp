@@ -5,6 +5,9 @@ extern int buttonCount;
 extern float t,h;
 extern int sec,min,hour,day,date,month,year,year4;
 extern unsigned int count_c;
+
+//extern int alaramHour,alaramMin ;
+
 Model::Model() : modelListener(0),c(0.0),tickk(0)
 {
 	
@@ -28,6 +31,11 @@ void Model::tick()
 	
 	// set alaram
 	modelListener->updateAlaram();
+	
+	//if(alaramHour == getMin_() && getMin_() == alaramMin ){
+	//	year = 2000;
+	//}
+
 }
 
 int Model::getC()

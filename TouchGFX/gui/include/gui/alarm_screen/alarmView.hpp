@@ -17,6 +17,7 @@ public:
     virtual void downHour();
     virtual void downMin();
     virtual void saveAlram();
+			void move(int page);
 protected:
 	int show_hr,show_min,alaramHour,alaramMin;
 };

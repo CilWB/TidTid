@@ -19,4 +19,5 @@ void alarmPresenter::deactivate()
 
 void alarmPresenter::updateAlaram(){
 	view.setSaveAlaram();
+	view.move(model->getC()%4);
 }

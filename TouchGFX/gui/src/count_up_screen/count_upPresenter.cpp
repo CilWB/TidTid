@@ -19,4 +19,5 @@ void count_upPresenter::deactivate()
 
 void count_upPresenter::updateCountUp(){
 	view.countUP(model->getTickk_());
+	view.move(model->getC()%4);
 }

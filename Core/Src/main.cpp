@@ -1506,7 +1506,7 @@ void StartBlink01(void const * argument)
 		if(HAL_GPIO_ReadPin(GPIOI,GPIO_PIN_11)==GPIO_PIN_SET){
 			buttonCount++;
 		}
-		osDelay(500);
+		osDelay(200);
   }
   /* USER CODE END StartBlink01 */
 }
