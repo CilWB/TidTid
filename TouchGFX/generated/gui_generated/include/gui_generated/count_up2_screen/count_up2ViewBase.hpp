@@ -22,6 +22,19 @@ public:
 
     virtual void setupScreen();
 
+    /*
+     * Custom Action Handlers
+     */
+    virtual void stopUp()
+    {
+        // Override and implement this function in count_up2View
+    }
+
+    virtual void resetUp()
+    {
+        // Override and implement this function in count_up2View
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());

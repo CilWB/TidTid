@@ -50,7 +50,7 @@ touchgfx::InternalFlashFont& getFont_Digitalt_30_4bpp();
 
 touchgfx::InternalFlashFont& getFont_Digitalt_30_4bpp()
 {
-    static touchgfx::InternalFlashFont Digitalt_30_4bpp(glyphs_Digitalt_30_4bpp, 11, 30, 0, 4, 0, 1, unicodes_Digitalt_30_4bpp, kerning_Digitalt_30_4bpp, 63, 0);
+    static touchgfx::InternalFlashFont Digitalt_30_4bpp(glyphs_Digitalt_30_4bpp, 12, 30, 0, 4, 0, 1, unicodes_Digitalt_30_4bpp, kerning_Digitalt_30_4bpp, 63, 0);
     return Digitalt_30_4bpp;
 }
 
@@ -74,7 +74,7 @@ touchgfx::InternalFlashFont& getFont_OpenSans_Bold_20_4bpp();
 
 touchgfx::InternalFlashFont& getFont_OpenSans_Bold_20_4bpp()
 {
-    static touchgfx::InternalFlashFont OpenSans_Bold_20_4bpp(glyphs_OpenSans_Bold_20_4bpp, 56, 20, 5, 4, 2, 1, unicodes_OpenSans_Bold_20_4bpp, kerning_OpenSans_Bold_20_4bpp, 63, 0);
+    static touchgfx::InternalFlashFont OpenSans_Bold_20_4bpp(glyphs_OpenSans_Bold_20_4bpp, 65, 20, 5, 4, 2, 1, unicodes_OpenSans_Bold_20_4bpp, kerning_OpenSans_Bold_20_4bpp, 63, 0);
     return OpenSans_Bold_20_4bpp;
 }
 
@@ -98,7 +98,7 @@ touchgfx::InternalFlashFont& getFont_segoeuib_16_4bpp();
 
 touchgfx::InternalFlashFont& getFont_segoeuib_16_4bpp()
 {
-    static touchgfx::InternalFlashFont segoeuib_16_4bpp(glyphs_segoeuib_16_4bpp, 55, 16, 4, 4, 2, 1, unicodes_segoeuib_16_4bpp, kerning_segoeuib_16_4bpp, 0, 0);
+    static touchgfx::InternalFlashFont segoeuib_16_4bpp(glyphs_segoeuib_16_4bpp, 56, 16, 4, 4, 2, 1, unicodes_segoeuib_16_4bpp, kerning_segoeuib_16_4bpp, 0, 0);
     return segoeuib_16_4bpp;
 }
 

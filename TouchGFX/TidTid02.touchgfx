@@ -298,7 +298,7 @@
               "BufferSize": 3
             },
             "Name": "temp_val",
-            "X": 184,
+            "X": 318,
             "Y": 13,
             "Width": 31,
             "Height": 33,
@@ -326,7 +326,7 @@
               "BufferSize": 5
             },
             "Name": "year_val",
-            "X": 374,
+            "X": 173,
             "Y": 13,
             "Width": 66,
             "Height": 33,
@@ -394,10 +394,10 @@
             "Alpha": 255,
             "AutoSize": true,
             "LineSpacing": 0,
-            "Name": "TEMP",
-            "X": 179,
+            "Name": "YEAR",
+            "X": 187,
             "Y": 46,
-            "Width": 40,
+            "Width": 37,
             "Height": 19,
             "Type": "TextArea",
             "Visible": true,
@@ -853,9 +853,106 @@
             "AutoSize": true,
             "LineSpacing": 0,
             "Name": "celsius",
-            "X": 215,
-            "Y": 18,
+            "X": 350,
+            "Y": 17,
             "Width": 16,
+            "Height": 19,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId139",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "TEMP_1",
+            "X": 318,
+            "Y": 46,
+            "Width": 40,
+            "Height": 19,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId140",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "HUMID",
+            "X": 382,
+            "Y": 46,
+            "Width": 52,
+            "Height": 19,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId141",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": false,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId144",
+              "UseBuffer": true,
+              "BufferSize": 3
+            },
+            "Name": "humid_val",
+            "X": 387,
+            "Y": 13,
+            "Width": 34,
+            "Height": 33,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId143",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 218,
+              "Green": 19,
+              "Blue": 19
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Name": "celsius_1",
+            "X": 421,
+            "Y": 17,
+            "Width": 13,
             "Height": 19,
             "Type": "TextArea",
             "Visible": true,
@@ -945,7 +1042,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId33",
               "UseBuffer": true,
-              "BufferSize": 10
+              "BufferSize": 15
             },
             "Name": "mont",
             "X": 91,
@@ -1121,6 +1218,32 @@
             "Moveable": false
           },
           {
+            "Color": {
+              "Red": 255,
+              "Green": 110,
+              "Blue": 110
+            },
+            "CenterX": 20,
+            "CenterY": 20,
+            "Radius": 17,
+            "LineWidth": 0,
+            "StartAngle": 0,
+            "EndAngle": 360,
+            "CapPrecision": "Butt",
+            "Alpha": 255,
+            "Name": "circle1",
+            "X": 289,
+            "Y": 222,
+            "Width": 39,
+            "Height": 40,
+            "Type": "Circle",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
             "TextId": "SingleUseId41",
             "TextRotation": "270",
             "Color": {
@@ -1134,7 +1257,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId42",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d1",
             "X": 172,
@@ -1162,7 +1285,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId44",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d2",
             "X": 172,
@@ -1190,7 +1313,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId46",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d3",
             "X": 172,
@@ -1218,7 +1341,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId48",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d4",
             "X": 172,
@@ -1246,7 +1369,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId50",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d5",
             "X": 172,
@@ -1274,7 +1397,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId52",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d6",
             "X": 172,
@@ -1302,7 +1425,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId54",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d7",
             "X": 172,
@@ -1330,7 +1453,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId56",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d8",
             "X": 203,
@@ -1358,7 +1481,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId58",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d9",
             "X": 203,
@@ -1386,7 +1509,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId60",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d10",
             "X": 203,
@@ -1414,7 +1537,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId62",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d11",
             "X": 203,
@@ -1442,7 +1565,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId64",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d12",
             "X": 203,
@@ -1470,7 +1593,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId66",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d13",
             "X": 203,
@@ -1498,7 +1621,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId68",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d14",
             "X": 203,
@@ -1526,7 +1649,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId70",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d15",
             "X": 234,
@@ -1554,7 +1677,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId72",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d16",
             "X": 234,
@@ -1582,7 +1705,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId74",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d17",
             "X": 234,
@@ -1610,7 +1733,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId76",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d18",
             "X": 234,
@@ -1638,7 +1761,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId78",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d19",
             "X": 234,
@@ -1666,7 +1789,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId80",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d20",
             "X": 234,
@@ -1694,7 +1817,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId82",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d21",
             "X": 234,
@@ -1722,7 +1845,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId84",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d22",
             "X": 265,
@@ -1750,7 +1873,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId86",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d23",
             "X": 265,
@@ -1778,7 +1901,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId88",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d24",
             "X": 265,
@@ -1806,7 +1929,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId90",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d25",
             "X": 265,
@@ -1834,7 +1957,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId92",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d26",
             "X": 265,
@@ -1862,7 +1985,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId94",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d27",
             "X": 265,
@@ -1890,7 +2013,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId96",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d28",
             "X": 265,
@@ -1918,7 +2041,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId98",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d29",
             "X": 296,
@@ -1946,7 +2069,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId100",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d30",
             "X": 296,
@@ -1974,7 +2097,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId102",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d31",
             "X": 296,
@@ -2002,7 +2125,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId104",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d32",
             "X": 296,
@@ -2030,7 +2153,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId106",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d33",
             "X": 296,
@@ -2058,7 +2181,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId108",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d34",
             "X": 296,
@@ -2086,7 +2209,7 @@
             "Wildcard1": {
               "TextId": "SingleUseId110",
               "UseBuffer": true,
-              "BufferSize": 2
+              "BufferSize": 3
             },
             "Name": "d35",
             "X": 296,
@@ -2288,7 +2411,7 @@
         ],
         "Name": "calendar",
         "OverrideDefaultBufferSize": false,
-        "CanvasBufferSize": 0
+        "CanvasBufferSize": 7200
       },
       {
         "Components": [
@@ -2666,6 +2789,20 @@
             "Action": {
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "count_down",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "click_start_but",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "start_but",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "count_up2",
               "Type": "ActionGotoScreen"
             }
           }
@@ -3066,6 +3203,44 @@
             "Action": {
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "count_up",
+              "Type": "ActionGotoScreen"
+            }
+          },
+          {
+            "InteractionName": "click_reset_but",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "reset_but",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "stopUp",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "click_stop_but",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "stop_but",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "resetUp",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "toggleModeTimer",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "toggleButton1_1",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "North",
+              "ActionComponent": "count_down",
               "Type": "ActionGotoScreen"
             }
           }
@@ -4621,6 +4796,26 @@
       },
       {
         "TextEntryId": "SingleUseId138",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId139",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId140",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId141",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId143",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId144",
         "IsResource": false
       }
     ],

@@ -11,9 +11,15 @@ Model::Model() : modelListener(0),c(0.0)
 
 void Model::tick()
 {
+	// clicking
 	modelListener->checkClick();
 	//modelListener->setCLK();
+	
+	// main screen
 	modelListener->updateTime();
+	
+	// calendar screen
+	modelListener->updateCalendar();
 }
 
 int Model::getC()
@@ -47,4 +53,7 @@ int Model::getYear_(){
 }
 int Model::getTemp_(){
 	return t;
+}
+int Model::getHumid_(){
+	return h;
 }

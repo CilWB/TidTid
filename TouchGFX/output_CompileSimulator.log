@@ -1,66 +1,24 @@
 Converting images
-Compiling gui/src/main_screen/mainView.cpp
-Compiling gui/src/main_screen/mainPresenter.cpp
-Compiling generated/gui_generated/src/count_down_screen/count_downViewBase.cpp
-Compiling generated/gui_generated/src/alarm_screen/alarmViewBase.cpp
-Compiling generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp
 Compiling generated/gui_generated/src/count_up2_screen/count_up2ViewBase.cpp
-Compiling generated/gui_generated/src/main_screen/mainViewBase.cpp
-Compiling generated/gui_generated/src/alarmmmmm_screen/alarmmmmmViewBase.cpp
-Compiling generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp
-Compiling generated/gui_generated/src/calendar_screen/calendarViewBase.cpp
-Compiling generated/gui_generated/src/common/FrontendApplicationBase.cpp
-Compiling generated/gui_generated/src/count_up_screen/count_upViewBase.cpp
-Compiling generated/fonts/src/Font_Digitalt_90_4bpp.cpp
-Compiling generated/fonts/src/Font_Digitalt_19_4bpp.cpp
-Compiling generated/fonts/src/Kerning_Digitalt_30_4bpp.cpp
-Compiling generated/fonts/src/Kerning_Digitalt_20_4bpp.cpp
-Compiling generated/fonts/src/Kerning_Digitalt_90_4bpp.cpp
-Compiling generated/fonts/src/Font_segoeuib_16_4bpp.cpp
-Compiling generated/fonts/src/Table_Digitalt_29_4bpp.cpp
-Compiling generated/fonts/src/Kerning_Digitalt_29_4bpp.cpp
-Compiling generated/fonts/src/Kerning_Digitalt_19_4bpp.cpp
-Compiling generated/fonts/src/Table_impact_20_4bpp.cpp
-Compiling generated/fonts/src/FontGetters.cpp
-Compiling generated/fonts/src/Table_segoeuib_18_4bpp.cpp
-Compiling generated/fonts/src/Table_OpenSans_Bold_20_4bpp.cpp
-Compiling generated/fonts/src/Kerning_segoeuib_16_4bpp.cpp
-Compiling generated/fonts/src/Table_Digitalt_30_4bpp.cpp
-Compiling generated/fonts/src/Table_Digitalt_20_4bpp.cpp
-Compiling generated/fonts/src/Font_Digitalt_29_4bpp.cpp
-Compiling generated/fonts/src/Table_Digitalt_90_4bpp.cpp
-Compiling generated/fonts/src/Table_Digitalt_19_4bpp.cpp
-Compiling generated/fonts/src/Font_impact_20_4bpp.cpp
-Compiling generated/fonts/src/Font_segoeuib_18_4bpp.cpp
-Compiling generated/fonts/src/Font_OpenSans_Bold_20_4bpp.cpp
-Compiling generated/fonts/src/Table_segoeuib_16_4bpp.cpp
-Compiling generated/fonts/src/Kerning_impact_20_4bpp.cpp
-Compiling generated/fonts/src/Kerning_segoeuib_18_4bpp.cpp
-Compiling generated/fonts/src/Font_Digitalt_30_4bpp.cpp
-Compiling generated/fonts/src/ApplicationFontProvider.cpp
-Compiling generated/fonts/src/Font_Digitalt_20_4bpp.cpp
-Compiling generated/fonts/src/Kerning_OpenSans_Bold_20_4bpp.cpp
-Compiling generated/texts/src/LanguageGb.cpp
-Compiling generated/texts/src/TypedTextDatabase.cpp
-Compiling generated/texts/src/Texts.cpp
-Compiling simulator/main.cpp
 Linking build/bin/simulator.exe
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model7getSec_Ev':
-C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:27: undefined reference to `sec'
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:33: undefined reference to `sec'
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model7getMin_Ev':
-C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:31: undefined reference to `min'
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:37: undefined reference to `min'
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model8getHour_Ev':
-C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:34: undefined reference to `hour'
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:40: undefined reference to `hour'
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model7getDay_Ev':
-C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:37: undefined reference to `day'
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:43: undefined reference to `day'
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model8getDate_Ev':
-C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:40: undefined reference to `date'
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:46: undefined reference to `date'
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model9getMonth_Ev':
-C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:43: undefined reference to `month'
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:49: undefined reference to `month'
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model8getYear_Ev':
-C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:46: undefined reference to `year4'
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:52: undefined reference to `year4'
 build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model8getTemp_Ev':
-C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:49: undefined reference to `t'
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:55: undefined reference to `t'
+build/MINGW32_NT-6.2/gui/src/model/Model.o: In function `ZN5Model9getHumid_Ev':
+C:\Users\Asus\Desktop\TidTid02\TouchGFX/gui/src/model/Model.cpp:58: undefined reference to `h'
 collect2.exe: error: ld returned 1 exit status
 simulator/gcc/Makefile:186: recipe for target 'build/bin/simulator.exe' failed
 make[2]: *** [build/bin/simulator.exe] Error 1

@@ -20,7 +20,6 @@ void mainPresenter::deactivate()
 
 void mainPresenter::updateTime()
 {
-	
 	view.updateTimee(
 	//model->getC(),
 	model->getSec_(),
@@ -30,7 +29,9 @@ void mainPresenter::updateTime()
 	model->getDate_(),
 	model->getMonth_(),
 	model->getYear_(),
-	model->getTemp_()
-	
+	model->getTemp_(),
+	model->getHumid_()	
 	);
+	//view.test();
 }
+

@@ -30,6 +30,7 @@ public:
 		
 		virtual void checkClick(){}
 		virtual void updateTime(){}
+		virtual void updateCalendar(){}
 			
 protected:
     Model* model;

@@ -11,6 +11,7 @@ public:
     virtual ~calendarView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+		void genCalendar(int day, int date , int month, int year);
 protected:
 };
 

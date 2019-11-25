@@ -26,7 +26,7 @@ public:
     virtual void deactivate();
 
     virtual ~calendarPresenter() {};
-
+		void updateCalendar();
 private:
     calendarPresenter();
 

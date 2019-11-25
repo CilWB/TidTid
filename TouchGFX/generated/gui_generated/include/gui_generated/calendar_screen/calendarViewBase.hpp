@@ -10,6 +10,8 @@
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/canvas/Circle.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/containers/buttons/Buttons.hpp>
 
 class calendarViewBase : public touchgfx::View<calendarPresenter>
@@ -37,6 +39,8 @@ protected:
     touchgfx::TextArea FR;
     touchgfx::TextArea SA;
     touchgfx::TextArea SU;
+    touchgfx::Circle circle1;
+    touchgfx::PainterRGB565 circle1Painter;
     touchgfx::TextAreaWithOneWildcard d1;
     touchgfx::TextAreaWithOneWildcard d2;
     touchgfx::TextAreaWithOneWildcard d3;
@@ -79,77 +83,77 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t MONT_SIZE = 10;
+    static const uint16_t MONT_SIZE = 15;
     touchgfx::Unicode::UnicodeChar montBuffer[MONT_SIZE];
-    static const uint16_t D1_SIZE = 2;
+    static const uint16_t D1_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d1Buffer[D1_SIZE];
-    static const uint16_t D2_SIZE = 2;
+    static const uint16_t D2_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d2Buffer[D2_SIZE];
-    static const uint16_t D3_SIZE = 2;
+    static const uint16_t D3_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d3Buffer[D3_SIZE];
-    static const uint16_t D4_SIZE = 2;
+    static const uint16_t D4_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d4Buffer[D4_SIZE];
-    static const uint16_t D5_SIZE = 2;
+    static const uint16_t D5_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d5Buffer[D5_SIZE];
-    static const uint16_t D6_SIZE = 2;
+    static const uint16_t D6_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d6Buffer[D6_SIZE];
-    static const uint16_t D7_SIZE = 2;
+    static const uint16_t D7_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d7Buffer[D7_SIZE];
-    static const uint16_t D8_SIZE = 2;
+    static const uint16_t D8_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d8Buffer[D8_SIZE];
-    static const uint16_t D9_SIZE = 2;
+    static const uint16_t D9_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d9Buffer[D9_SIZE];
-    static const uint16_t D10_SIZE = 2;
+    static const uint16_t D10_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d10Buffer[D10_SIZE];
-    static const uint16_t D11_SIZE = 2;
+    static const uint16_t D11_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d11Buffer[D11_SIZE];
-    static const uint16_t D12_SIZE = 2;
+    static const uint16_t D12_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d12Buffer[D12_SIZE];
-    static const uint16_t D13_SIZE = 2;
+    static const uint16_t D13_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d13Buffer[D13_SIZE];
-    static const uint16_t D14_SIZE = 2;
+    static const uint16_t D14_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d14Buffer[D14_SIZE];
-    static const uint16_t D15_SIZE = 2;
+    static const uint16_t D15_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d15Buffer[D15_SIZE];
-    static const uint16_t D16_SIZE = 2;
+    static const uint16_t D16_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d16Buffer[D16_SIZE];
-    static const uint16_t D17_SIZE = 2;
+    static const uint16_t D17_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d17Buffer[D17_SIZE];
-    static const uint16_t D18_SIZE = 2;
+    static const uint16_t D18_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d18Buffer[D18_SIZE];
-    static const uint16_t D19_SIZE = 2;
+    static const uint16_t D19_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d19Buffer[D19_SIZE];
-    static const uint16_t D20_SIZE = 2;
+    static const uint16_t D20_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d20Buffer[D20_SIZE];
-    static const uint16_t D21_SIZE = 2;
+    static const uint16_t D21_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d21Buffer[D21_SIZE];
-    static const uint16_t D22_SIZE = 2;
+    static const uint16_t D22_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d22Buffer[D22_SIZE];
-    static const uint16_t D23_SIZE = 2;
+    static const uint16_t D23_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d23Buffer[D23_SIZE];
-    static const uint16_t D24_SIZE = 2;
+    static const uint16_t D24_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d24Buffer[D24_SIZE];
-    static const uint16_t D25_SIZE = 2;
+    static const uint16_t D25_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d25Buffer[D25_SIZE];
-    static const uint16_t D26_SIZE = 2;
+    static const uint16_t D26_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d26Buffer[D26_SIZE];
-    static const uint16_t D27_SIZE = 2;
+    static const uint16_t D27_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d27Buffer[D27_SIZE];
-    static const uint16_t D28_SIZE = 2;
+    static const uint16_t D28_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d28Buffer[D28_SIZE];
-    static const uint16_t D29_SIZE = 2;
+    static const uint16_t D29_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d29Buffer[D29_SIZE];
-    static const uint16_t D30_SIZE = 2;
+    static const uint16_t D30_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d30Buffer[D30_SIZE];
-    static const uint16_t D31_SIZE = 2;
+    static const uint16_t D31_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d31Buffer[D31_SIZE];
-    static const uint16_t D32_SIZE = 2;
+    static const uint16_t D32_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d32Buffer[D32_SIZE];
-    static const uint16_t D33_SIZE = 2;
+    static const uint16_t D33_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d33Buffer[D33_SIZE];
-    static const uint16_t D34_SIZE = 2;
+    static const uint16_t D34_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d34Buffer[D34_SIZE];
-    static const uint16_t D35_SIZE = 2;
+    static const uint16_t D35_SIZE = 3;
     touchgfx::Unicode::UnicodeChar d35Buffer[D35_SIZE];
 
 private:
@@ -163,6 +167,12 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<calendarViewBase, const touchgfx::AbstractButtonContainer&> flexButtonCallback;
+
+    /*
+     * Canvas Buffer Size
+     */
+    static const uint16_t CANVAS_BUFFER_SIZE = 7200;
+    uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
 
 };
 

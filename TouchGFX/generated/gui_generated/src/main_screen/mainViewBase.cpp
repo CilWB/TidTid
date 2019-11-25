@@ -25,14 +25,14 @@ mainViewBase::mainViewBase() :
     date_val.setWildcard(date_valBuffer);
     date_val.setTypedText(TypedText(T_SINGLEUSEID8));
 
-    temp_val.setPosition(184, 13, 31, 33);
+    temp_val.setPosition(318, 13, 31, 33);
     temp_val.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     temp_val.setLinespacing(0);
     Unicode::snprintf(temp_valBuffer, TEMP_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID11).getText());
     temp_val.setWildcard(temp_valBuffer);
     temp_val.setTypedText(TypedText(T_SINGLEUSEID10));
 
-    year_val.setPosition(374, 13, 66, 33);
+    year_val.setPosition(173, 13, 66, 33);
     year_val.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     year_val.setLinespacing(0);
     Unicode::snprintf(year_valBuffer, YEAR_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID13).getText());
@@ -49,10 +49,10 @@ mainViewBase::mainViewBase() :
     DATE.setLinespacing(0);
     DATE.setTypedText(TypedText(T_SINGLEUSEID15));
 
-    TEMP.setXY(179, 46);
-    TEMP.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
-    TEMP.setLinespacing(0);
-    TEMP.setTypedText(TypedText(T_SINGLEUSEID16));
+    YEAR.setXY(187, 46);
+    YEAR.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    YEAR.setLinespacing(0);
+    YEAR.setTypedText(TypedText(T_SINGLEUSEID16));
 
     hour_val.setPosition(74, 89, 93, 98);
     hour_val.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
@@ -138,10 +138,32 @@ mainViewBase::mainViewBase() :
     flexButton1_2.setPosition(454, 146, 26, 24);
     flexButton1_2.setAction(flexButtonCallback);
 
-    celsius.setXY(215, 18);
+    celsius.setXY(350, 17);
     celsius.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
     celsius.setLinespacing(0);
     celsius.setTypedText(TypedText(T_SINGLEUSEID132));
+
+    TEMP_1.setXY(318, 46);
+    TEMP_1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    TEMP_1.setLinespacing(0);
+    TEMP_1.setTypedText(TypedText(T_SINGLEUSEID139));
+
+    HUMID.setXY(382, 46);
+    HUMID.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    HUMID.setLinespacing(0);
+    HUMID.setTypedText(TypedText(T_SINGLEUSEID140));
+
+    humid_val.setPosition(387, 13, 34, 33);
+    humid_val.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    humid_val.setLinespacing(0);
+    Unicode::snprintf(humid_valBuffer, HUMID_VAL_SIZE, "%s", TypedText(T_SINGLEUSEID144).getText());
+    humid_val.setWildcard(humid_valBuffer);
+    humid_val.setTypedText(TypedText(T_SINGLEUSEID141));
+
+    celsius_1.setXY(421, 17);
+    celsius_1.setColor(touchgfx::Color::getColorFrom24BitRGB(218, 19, 19));
+    celsius_1.setLinespacing(0);
+    celsius_1.setTypedText(TypedText(T_SINGLEUSEID143));
 
     add(box1);
     add(mont_val);
@@ -150,7 +172,7 @@ mainViewBase::mainViewBase() :
     add(year_val);
     add(MONTH);
     add(DATE);
-    add(TEMP);
+    add(YEAR);
     add(hour_val);
     add(colon);
     add(minutes_val);
@@ -167,6 +189,10 @@ mainViewBase::mainViewBase() :
     add(flexButton1_1);
     add(flexButton1_2);
     add(celsius);
+    add(TEMP_1);
+    add(HUMID);
+    add(humid_val);
+    add(celsius_1);
 }
 
 void mainViewBase::setupScreen()

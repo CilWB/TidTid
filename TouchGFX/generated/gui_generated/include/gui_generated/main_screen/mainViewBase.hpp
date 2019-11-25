@@ -35,7 +35,7 @@ protected:
     touchgfx::TextAreaWithOneWildcard year_val;
     touchgfx::TextArea MONTH;
     touchgfx::TextArea DATE;
-    touchgfx::TextArea TEMP;
+    touchgfx::TextArea YEAR;
     touchgfx::TextAreaWithOneWildcard hour_val;
     touchgfx::TextArea colon;
     touchgfx::TextAreaWithOneWildcard minutes_val;
@@ -52,6 +52,10 @@ protected:
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_1;
     touchgfx::BoxWithBorderButtonStyle< touchgfx::ClickButtonTrigger > flexButton1_2;
     touchgfx::TextArea celsius;
+    touchgfx::TextArea TEMP_1;
+    touchgfx::TextArea HUMID;
+    touchgfx::TextAreaWithOneWildcard humid_val;
+    touchgfx::TextArea celsius_1;
 
     /*
      * Wildcard Buffers
@@ -70,6 +74,8 @@ protected:
     touchgfx::Unicode::UnicodeChar minutes_valBuffer[MINUTES_VAL_SIZE];
     static const uint16_t SEC_VAL_SIZE = 3;
     touchgfx::Unicode::UnicodeChar sec_valBuffer[SEC_VAL_SIZE];
+    static const uint16_t HUMID_VAL_SIZE = 3;
+    touchgfx::Unicode::UnicodeChar humid_valBuffer[HUMID_VAL_SIZE];
 
 private:
 

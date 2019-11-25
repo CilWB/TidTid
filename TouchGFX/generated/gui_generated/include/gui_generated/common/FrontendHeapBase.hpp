@@ -20,10 +20,12 @@
 
 
 
+#include <touchgfx/transitions/SlideTransition.hpp>
 
 
 
 
+#include <touchgfx/transitions/SlideTransition.hpp>
 
 
 
@@ -120,7 +122,8 @@ public:
     typedef meta::TypeList< NoTransition,
             meta::TypeList< CoverTransition<WEST>,
             meta::TypeList< SlideTransition<EAST>,
-            meta::Nil > >
+            meta::TypeList< SlideTransition<NORTH>,
+            meta::Nil > > >
             > GeneratedTransitionTypes;
 
     /**

@@ -1506,7 +1506,7 @@ void StartBlink01(void const * argument)
 		if(HAL_GPIO_ReadPin(GPIOI,GPIO_PIN_11)==GPIO_PIN_SET){
 			buttonCount++;
 		}
-		osDelay(1);
+		osDelay(500);
   }
   /* USER CODE END StartBlink01 */
 }
@@ -1525,7 +1525,7 @@ void StartBlink02(void const * argument)
   for(;;)
   {
 		HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
-		osDelay(1);
+		osDelay(1000);
   }
   /* USER CODE END StartBlink02 */
 }
@@ -1544,7 +1544,7 @@ void ReadRTC(void const * argument)
   for(;;)
   {
 		rtc();
-    osDelay(1);
+    osDelay(500);
   }
   /* USER CODE END ReadRTC */
 }

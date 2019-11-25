@@ -8,6 +8,8 @@
 calendarViewBase::calendarViewBase() :
     flexButtonCallback(this, &calendarViewBase::flexButtonCallbackHandler)
 {
+    CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
+
     box1.setPosition(0, 0, 480, 272);
     box1.setColor(touchgfx::Color::getColorFrom24BitRGB(29, 29, 29));
 
@@ -60,6 +62,14 @@ calendarViewBase::calendarViewBase() :
     SU.setLinespacing(0);
     SU.setRotation(TEXT_ROTATE_270);
     SU.setTypedText(TypedText(T_SINGLEUSEID40));
+
+    circle1.setPosition(289, 222, 39, 40);
+    circle1.setCenter(20, 20);
+    circle1.setRadius(17);
+    circle1.setLineWidth(0);
+    circle1.setArc(0, 360);
+    circle1Painter.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 110, 110));
+    circle1.setPainter(circle1Painter);
 
     d1.setPosition(172, 234, 22, 21);
     d1.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
@@ -368,6 +378,7 @@ calendarViewBase::calendarViewBase() :
     add(FR);
     add(SA);
     add(SU);
+    add(circle1);
     add(d1);
     add(d2);
     add(d3);

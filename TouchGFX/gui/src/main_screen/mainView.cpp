@@ -1,4 +1,5 @@
 #include <gui/main_screen/mainView.hpp>
+#include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/Color.hpp>
 mainView::mainView()
 {
@@ -16,7 +17,7 @@ void mainView::tearDownScreen()
 }
 
 
-void mainView::updateTimee(int sec,int min,int hour,int day,int date,int month,int year,int tmep)
+void mainView::updateTimee(int sec,int min,int hour,int day,int date,int month,int year,int tmep,int humid)
 {
 	Unicode::snprintf(mont_valBuffer, 3,"%d",month);
 	Unicode::snprintf(date_valBuffer, 3,"%d",date);
@@ -26,6 +27,7 @@ void mainView::updateTimee(int sec,int min,int hour,int day,int date,int month,i
 	Unicode::snprintf(hour_valBuffer, 3,"%02d",hour);
 	Unicode::snprintf(minutes_valBuffer, 3,"%02d",min);
 	Unicode::snprintf(sec_valBuffer, 3,"%02d",sec);
+	Unicode::snprintf(humid_valBuffer, 3,"%d",humid);
 	
 	mont_val.invalidate();
 	date_val.invalidate();
@@ -61,6 +63,13 @@ void mainView::updateTimee(int sec,int min,int hour,int day,int date,int month,i
 						break;
 	}
 	//SUN.setColor(touchgfx::Color::getColorFrom24BitRGB(0,150,0));
-		
+	
 }
 		
+
+
+void mainView::test(){
+
+	//HAL::getInstance()->setDisplayOrientation(orientation); //set new orientation
+  static_cast<FrontendApplication*>(Application::getInstance())->gotocalendarScreenNoTransition(); //switch screen (to the same screen we are currently displaying).
+}

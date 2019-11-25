@@ -34,9 +34,11 @@ count_up2ViewBase::count_up2ViewBase() :
 
     stop_but.setXY(117, 217);
     stop_but.setBitmaps(Bitmap(BITMAP_STOP_ID), Bitmap(BITMAP_STOP1_ID));
+    stop_but.setAction(buttonCallback);
 
     toggleButton1_1.setXY(186, 35);
     toggleButton1_1.setBitmaps(Bitmap(BITMAP_UP_ID), Bitmap(BITMAP_DOWN_ID));
+    toggleButton1_1.setAction(buttonCallback);
 
     flexButton1.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1.setBorderSize(5);
@@ -64,6 +66,7 @@ count_up2ViewBase::count_up2ViewBase() :
 
     reset_but.setXY(253, 217);
     reset_but.setBitmaps(Bitmap(BITMAP_RESET_ID), Bitmap(BITMAP_RESET1_ID));
+    reset_but.setAction(buttonCallback);
 
     add(box1);
     add(minutes_val);
@@ -87,15 +90,24 @@ void count_up2ViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& sr
 {
     if (&src == &stop_but)
     {
-
+        //click_stop_but
+        //When stop_but clicked call virtual function
+        //Call resetUp
+        resetUp();
     }
     else if (&src == &toggleButton1_1)
     {
-
+        //toggleModeTimer
+        //When toggleButton1_1 clicked change screen to count_down
+        //Go to count_down with screen transition towards North
+        application().gotocount_downScreenSlideTransitionNorth();
     }
     else if (&src == &reset_but)
     {
-
+        //click_reset_but
+        //When reset_but clicked call virtual function
+        //Call stopUp
+        stopUp();
     }
 }
 

@@ -37,6 +37,7 @@ public:
     void tick();
 		void setCLK();
 		void updateTime();
+		void updateCalendar();
 		
 		int getC();
 		int getSec_();
@@ -47,7 +48,7 @@ public:
 		int getMonth_();
 		int getYear_();
 		int getTemp_();
-		
+		int getHumid_();
 protected:
     /**
      * Pointer to the currently active presenter.

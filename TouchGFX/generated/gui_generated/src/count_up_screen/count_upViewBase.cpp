@@ -37,6 +37,7 @@ count_upViewBase::count_upViewBase() :
 
     start_but.setXY(186, 217);
     start_but.setBitmaps(Bitmap(BITMAP_START_ID), Bitmap(BITMAP_START1_ID));
+    start_but.setAction(buttonCallback);
 
     flexButton1.setBoxWithBorderPosition(0, 0, 26, 24);
     flexButton1.setBorderSize(5);
@@ -87,7 +88,10 @@ void count_upViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src
     }
     else if (&src == &start_but)
     {
-
+        //click_start_but
+        //When start_but clicked change screen to count_up2
+        //Go to count_up2 with screen transition towards North
+        application().gotocount_up2ScreenSlideTransitionNorth();
     }
 }
 
